@@ -1,7 +1,7 @@
 # Hi there, I'm Uttkarsh Ruparel  
 
 B.Tech CSE @ Symbiosis Institute of Technology (2023–2027)  
-Hackathon Finalist (ACE 2.0) | Full-Stack Developer | MERN · Java · Cloud · Competitive Programming  
+Hackathon Finalist (ACE 2.0) | Full-Stack | Java · Cloud · DevOps · Competitive Programming  
 
 ---
 
@@ -10,18 +10,16 @@ Hackathon Finalist (ACE 2.0) | Full-Stack Developer | MERN · Java · Cloud · C
 I’m an undergrad Computer Science student passionate about building scalable web applications, solving challenging problems, and exploring cloud & DevOps.  
 I specialize in **full-stack systems, backend architectures, and cloud deployments**, while also mentoring peers in coding and contributing to campus tech initiatives.  
 
-Though my expertise lies in **MERN + backend**, I thrive in collaborative teams with frontend, ML, and design specialists.  
-
 ---
 
 ## Skills  
 
-- Languages: Java, C++, Python, JavaScript, SQL (MySQL, PostgreSQL, SQLite), MongoDB  
+- Languages: Java, C++, Python, JavaScript, SQL (MySQL, PostgreSQL, SQLite), MongoDB, Bash  
 - Backend: Node.js, Express.js, Flask, Java Spring Boot, REST APIs  
 - Frontend: React.js, Tailwind CSS, HTML5, CSS3  
 - Databases: MySQL, PostgreSQL, MongoDB, Supabase, Redis  
-- Cloud & DevOps: AWS (EC2, S3, IAM, RDS), Docker, GitHub Actions (CI/CD), Vercel, Netlify, Render  
-- Tools: Git, GitHub, Postman, VSCode, CLI, MySQL Workbench, Google Colab   
+- Cloud & DevOps: AWS, Docker, GitHub Actions (CI/CD)
+- Tools: Git, GitHub, Postman, VSCode, MySQL Workbench   
 
 ---
 
@@ -34,21 +32,10 @@ Though my expertise lies in **MERN + backend**, I thrive in collaborative teams 
 
 ---
 
-## Hackathon Achievements  
+## Achievements  
 
 - Finalist – ACE 2.0 (2025) | Smart Governance Platform (Top 400+ teams)  
-- GDSC Competitive Programming Co-Head – Organizing coding contests & workshops for 100+ students  
-- Social Media Head – SymbiTech Fest (2025) | Boosted participation by 20–25% through digital outreach  
-
----
-
-## Notable Projects  
-
-- **VerQ** – College placement automation platform (MERN) with AI-powered ATS Resume Scorer  
-- **Order Management System** – Java Swing + JDBC app for vendor, customer & order management  
-- **BitLink** – React + Supabase-based URL shortener & QR generator with real-time link tracking  
-
-More on GitHub → [@uttkarshruparel](https://github.com/YHQZ1/)  
+- GDSC Competitive Programming Co-Head – Organizing coding contests & workshops for 100+ students
 
 ---
 
