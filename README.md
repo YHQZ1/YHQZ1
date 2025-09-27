@@ -16,13 +16,12 @@ Though my expertise lies in **MERN + backend**, I thrive in collaborative teams 
 
 ## Skills  
 
-**Languages**: Java, C, C++, Python, JavaScript, HTML, CSS, SQL (MySQL, PostgreSQL, SQLite), PL/SQL, MongoDB  
-**Frameworks**: React.js, Node.js, Express.js, Flask, SQLAlchemy, Jinja2, Java Spring Boot, Tailwind CSS  
-**Cloud & DevOps**: AWS (EC2, S3, IAM, RDS basics), Docker, GitHub  
-**Databases**: MySQL, PostgreSQL, MongoDB, Supabase  
-**Tools**: Git, GitHub, Postman, VSCode, Netlify, Vercel, Render, Redis, MySQL Workbench, Google Colab  
-**Core CS**: OOP, DSA, OS, DBMS, CN, COA  
-**Design**: Figma, Canva, Draw.io, Mermaid  
+- Languages: Java, C++, Python, JavaScript, SQL (MySQL, PostgreSQL, SQLite), MongoDB  
+- Backend: Node.js, Express.js, Flask, Java Spring Boot, REST APIs  
+- Frontend: React.js, Tailwind CSS, HTML5, CSS3  
+- Databases: MySQL, PostgreSQL, MongoDB, Supabase, Redis  
+- Cloud & DevOps: AWS (EC2, S3, IAM, RDS), Docker, GitHub Actions (CI/CD), Vercel, Netlify, Render  
+- Tools: Git, GitHub, Postman, VSCode, CLI, MySQL Workbench, Google Colab   
 
 ---
 
@@ -49,7 +48,7 @@ Though my expertise lies in **MERN + backend**, I thrive in collaborative teams 
 - **Order Management System** – Java Swing + JDBC app for vendor, customer & order management  
 - **BitLink** – React + Supabase-based URL shortener & QR generator with real-time link tracking  
 
-More on GitHub → [@uttkarshruparel](https://github.com/uttkarshruparel)  
+More on GitHub → [@uttkarshruparel](https://github.com/YHQZ1/)  
 
 ---
 
@@ -64,7 +63,7 @@ Symbiosis Institute of Technology, Pune (2023–2027) | CGPA: 7.42
 
 - **Email**: [rupareluttkarsh2309@gmail.com](mailto:rupareluttkarsh2309@gmail.com)  
 - **Phone**: +91 98850 00237  
-- **LinkedIn**: [linkedin.com/in/uttkarsh](#)  
-- **Portfolio**: [your-portfolio-link](#)  
-- **GitHub**: [github.com/uttkarshruparel](https://github.com/uttkarshruparel)  
-- **LeetCode**: [leetcode.com/uttkarsh](#)  
+- **LinkedIn**: [linkedin.com/in/uttkarsh](https://www.linkedin.com/in/uttkarsh-ruparel/)  
+- **Portfolio**: [your-portfolio-link](uttkarsh-ruparel.vercel.app)  
+- **GitHub**: [github.com/uttkarshruparel](https://github.com/YHQZ1/)  
+- **LeetCode**: [leetcode.com/uttkarsh](https://leetcode.com/u/Uttkarsh09_/)  
