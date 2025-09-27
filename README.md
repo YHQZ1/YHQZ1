@@ -1,4 +1,4 @@
-# Hi there, I'm Uttkarsh Ruparel  
+# Hey there, I'm Uttkarsh Ruparel  
 
 B.Tech CSE @ Symbiosis Institute of Technology (2023–2027)  
 Hackathon Finalist (ACE 2.0) | Full-Stack | Java · Cloud · DevOps · Competitive Programming  
@@ -18,17 +18,17 @@ I specialize in **full-stack systems, backend architectures, and cloud deploymen
 - Backend: Node.js, Express.js, Flask, Java Spring Boot, REST APIs  
 - Frontend: React.js, Tailwind CSS, HTML5, CSS3  
 - Databases: MySQL, PostgreSQL, MongoDB, Supabase, Redis  
-- Cloud & DevOps: AWS, Docker, GitHub Actions (CI/CD)
-- Tools: Git, GitHub, Postman, VSCode, MySQL Workbench   
+- Cloud & DevOps: AWS, Docker, Kubernetes
+- Tools: Git, GitHub, Postman, VSCode, Figma, Jira
 
 ---
 
 ## Current Focus  
 
-- Sharpening **DSA & Competitive Programming**  
-- Building **end-to-end MERN projects with cloud integration**  
-- Exploring **CI/CD pipelines & DevOps best practices**  
-- Engaging with **student tech communities** through GDSC & SymbiTech  
+- Building production-grade full-stack applications (MERN + Cloud)
+- Designing scalable backend systems and APIs
+- Automating deployments with CI/CD, Docker, and cloud platforms
+- Sharpening problem-solving skills through DSA and LeetCode
 
 ---
 
@@ -42,7 +42,7 @@ I specialize in **full-stack systems, backend architectures, and cloud deploymen
 ## Education  
 
 **B.Tech – Computer Science Engineering**  
-Symbiosis Institute of Technology, Pune (2023–2027) | CGPA: 7.42  
+Symbiosis Institute of Technology, Pune (2023–2027)
 
 ---
 
