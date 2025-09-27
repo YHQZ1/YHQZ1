@@ -50,7 +50,6 @@ Symbiosis Institute of Technology, Pune (2023–2027) | CGPA: 7.42
 
 - **Email**: [rupareluttkarsh2309@gmail.com](mailto:rupareluttkarsh2309@gmail.com)  
 - **Phone**: +91 98850 00237  
-- **LinkedIn**: [linkedin.com/in/uttkarsh](https://www.linkedin.com/in/uttkarsh-ruparel/)  
-- **Portfolio**: [your-portfolio-link](uttkarsh-ruparel.vercel.app)  
-- **GitHub**: [github.com/uttkarshruparel](https://github.com/YHQZ1/)  
-- **LeetCode**: [leetcode.com/uttkarsh](https://leetcode.com/u/Uttkarsh09_/)  
+- **LinkedIn**: [linkedin](https://www.linkedin.com/in/uttkarsh-ruparel/)  
+- **Portfolio**: [portfolio](uttkarsh-ruparel.vercel.app)
+- **LeetCode**: [leetcode](https://leetcode.com/u/Uttkarsh09_/)  
