@@ -51,5 +51,5 @@ Symbiosis Institute of Technology, Pune (2023–2027)
 - **Email**: [rupareluttkarsh2309@gmail.com](mailto:rupareluttkarsh2309@gmail.com)  
 - **Phone**: +91 98850 00237  
 - **LinkedIn**: [linkedin](https://www.linkedin.com/in/uttkarsh-ruparel/)  
-- **Portfolio**: [portfolio](uttkarsh-ruparel.vercel.app)
+- **Portfolio**: [portfolio](https://uttkarsh-ruparel.vercel.app/)
 - **LeetCode**: [leetcode](https://leetcode.com/u/Uttkarsh09_/)  
