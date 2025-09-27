@@ -1,11 +1,11 @@
-# 👋 Hi there, I'm Uttkarsh Ruparel
+# Hi there, I'm Uttkarsh Ruparel
 
 B.Tech CSE @ Symbiosis Institute of Technology (2023–2027)
-🏆 Hackathon Finalist (ACE 2.0) | 💻 Full-Stack Developer | ⚙️ MERN · Java · Cloud · Competitive Programming
+Hackathon Finalist (ACE 2.0) | Full-Stack Developer | MERN · Java · Cloud · Competitive Programming
 
 ---
 
-## 🚀 About Me
+## About Me
 
 I’m an undergrad Computer Science student passionate about building scalable web applications, solving challenging problems, and exploring cloud & DevOps.
 I specialize in **full-stack systems, backend architectures, and cloud deployments**, while also mentoring peers in coding and contributing to campus tech initiatives.
@@ -14,7 +14,7 @@ Though my expertise lies in **MERN + backend**, I thrive in collaborative teams 
 
 ---
 
-## 🛠️ Skills
+## Skills
 
 **Languages**: Java, C, C++, Python, JavaScript, HTML, CSS, SQL (MySQL, PostgreSQL, SQLite), PL/SQL, MongoDB
 **Frameworks**: React.js, Node.js, Express.js, Flask, SQLAlchemy, Jinja2, Java Spring Boot, Tailwind CSS
@@ -26,7 +26,7 @@ Though my expertise lies in **MERN + backend**, I thrive in collaborative teams 
 
 ---
 
-## 🧠 Current Focus
+## Current Focus
 
 * Sharpening **DSA & Competitive Programming**
 * Building **end-to-end MERN projects with cloud integration**
@@ -35,15 +35,15 @@ Though my expertise lies in **MERN + backend**, I thrive in collaborative teams 
 
 ---
 
-## 🏆 Hackathon Achievements
+## Hackathon Achievements
 
-🥈 **Finalist – ACE 2.0 (2025)** | Smart Governance Platform (Top 400+ teams)
-📌 **GDSC Competitive Programming Co-Head** – Organizing coding contests & workshops for 100+ students
-📌 **Social Media Head – SymbiTech Fest (2025)** | Boosted participation by 20–25% through digital outreach
+* Finalist – ACE 2.0 (2025) | Smart Governance Platform (Top 400+ teams)
+* GDSC Competitive Programming Co-Head – Organizing coding contests & workshops for 100+ students
+* Social Media Head – SymbiTech Fest (2025) | Boosted participation by 20–25% through digital outreach
 
 ---
 
-## 🔍 Notable Projects
+## Notable Projects
 
 * **VerQ** – College placement automation platform (MERN) with AI-powered ATS Resume Scorer
 * **Order Management System** – Java Swing + JDBC app for vendor, customer & order management
@@ -53,18 +53,18 @@ More on GitHub → @uttkarshruparel
 
 ---
 
-## 🎓 Education
+## Education
 
 **B.Tech – Computer Science Engineering**
 Symbiosis Institute of Technology, Pune (2023–2027) | CGPA: 7.42
 
 ---
 
-## 📬 Let’s Connect
+## Let’s Connect
 
-📧 Email: [rupareluttkarsh2309@gmail.com](mailto:rupareluttkarsh2309@gmail.com)
-📱 Phone: +91 98850 00237
-🔗 LinkedIn: [linkedin.com/in/uttkarsh](#)
-🌐 Portfolio: [your-portfolio-link](#)
-💻 GitHub: [github.com/uttkarshruparel](#)
-🏆 LeetCode: [leetcode.com/uttkarsh](#)
+Email: [rupareluttkarsh2309@gmail.com](mailto:rupareluttkarsh2309@gmail.com)
+Phone: +91 98850 00237
+LinkedIn: [linkedin.com/in/uttkarsh](#)
+Portfolio: [your-portfolio-link](#)
+GitHub: [github.com/uttkarshruparel](#)
+LeetCode: [leetcode.com/uttkarsh](#)
