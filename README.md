@@ -15,9 +15,8 @@ I specialize in **full-stack systems, backend architectures, and cloud deploymen
 ## Skills  
 
 - Languages: Java, C++, Python, JavaScript, SQL (MySQL, PostgreSQL, SQLite), MongoDB, Bash  
-- Backend: Node.js, Express.js, Flask, Java Spring Boot, REST APIs  
-- Frontend: React.js, Tailwind CSS, HTML5, CSS3  
-- Databases: MySQL, PostgreSQL, MongoDB, Supabase, Redis  
+- Backend: Node.js, Express.js, Flask, Java Spring Boot, REST APIs, Redis
+- Frontend: React.js, Tailwind CSS
 - Cloud & DevOps: AWS, Docker, Kubernetes
 - Tools: Git, GitHub, Postman, VSCode, Figma, Jira
 
