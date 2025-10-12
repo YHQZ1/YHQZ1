@@ -1,7 +1,7 @@
 # Hey there, I'm Uttkarsh Ruparel  
 
 B.Tech CSE @ Symbiosis Institute of Technology (2023–2027)  
-Hackathon Finalist (ACE 2.0) | Full-Stack | Java · Cloud · DevOps · Competitive Programming  
+Full-Stack | Java · Cloud · DevOps · Competitive Programming  
 
 ---
 
@@ -14,11 +14,11 @@ I specialize in **full-stack systems, backend architectures, and cloud deploymen
 
 ## Skills  
 
-- Languages: Java, C++, Python, JavaScript, SQL (MySQL, PostgreSQL, SQLite), MongoDB, Bash  
+- Languages & Databases: Java, C++, Python, JavaScript, SQL (MySQL, PostgreSQL, SQLite), MongoDB, Bash  
 - Backend: Node.js, Express.js, Flask, Java Spring Boot, REST APIs, Redis
 - Frontend: React.js, Tailwind CSS
 - Cloud & DevOps: AWS, Docker, Kubernetes
-- Tools: Git, GitHub, Postman, VSCode, Figma, Jira
+- Developer Tools: Git, GitHub, Postman, VSCode, Figma
 
 ---
 
