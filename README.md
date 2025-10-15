@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=2196F3&center=true&vCenter=true&width=600&lines=Turning+Ideas+Into+Scalable+Systems;From+Backend+to+Frontend+with+Style;Automating+Cloud+Deployments+Seamlessly;Solving+Algorithms+Like+a+Pro)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=2196F3&center=true&vCenter=true&width=600&lines=Building+Robust+Full-Stack+Systems;Designing+Scalable+Backend+Architectures;Implementing+Cloud+Native+Solutions;Optimizing+Algorithms+for+Performance)](https://git.io/typing-svg)
 
 </div>
 
