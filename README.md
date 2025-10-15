@@ -1,13 +1,19 @@
 # Hey there, I'm Uttkarsh Ruparel  
 
+<div align="center">
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=2196F3&center=true&vCenter=true&width=600&lines=Turning+Ideas+Into+Scalable+Systems;From+Backend+to+Frontend+with+Style;Automating+Cloud+Deployments+Seamlessly;Solving+Algorithms+Like+a+Pro)](https://git.io/typing-svg)
+
+</div>
+
 B.Tech CSE @ Symbiosis Institute of Technology (2023–2027)  
-Full-Stack | Java · Cloud · DevOps · Competitive Programming  
+Full-Stack | Java | Cloud | DevOps | Competitive Programming  
 
 ---
 
 ## About Me  
 
-I’m an undergrad Computer Science student passionate about building scalable web applications, solving challenging problems, and exploring cloud & DevOps.  
+I'm an undergrad Computer Science student passionate about building scalable web applications, solving challenging problems, and exploring cloud & DevOps.  
 I specialize in **full-stack systems, backend architectures, and cloud deployments**, while also mentoring peers in coding and contributing to campus tech initiatives.  
 
 ---
@@ -55,7 +61,6 @@ I specialize in **full-stack systems, backend architectures, and cloud deploymen
   <img src="https://img.shields.io/badge/Figma-%23F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
 </p>
 
-
 ---
 
 ## Current Focus  
@@ -81,7 +86,7 @@ Symbiosis Institute of Technology, Pune (2023–2027)
 
 ---
 
-## Let’s Connect  
+## Let's Connect  
 
 - **Email**: [rupareluttkarsh2309@gmail.com](mailto:rupareluttkarsh2309@gmail.com)  
 - **Phone**: +91 98850 00237  
