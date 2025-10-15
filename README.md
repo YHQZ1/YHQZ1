@@ -86,10 +86,25 @@ Symbiosis Institute of Technology, Pune (2023–2027)
 
 ---
 
-## Let's Connect  
+## Let's Connect
 
-- **Email**: [rupareluttkarsh2309@gmail.com](mailto:rupareluttkarsh2309@gmail.com)  
-- **Phone**: +91 98850 00237  
-- **LinkedIn**: [linkedin](https://www.linkedin.com/in/uttkarsh-ruparel/)  
-- **Portfolio**: [portfolio](https://uttkarsh-ruparel.vercel.app/)
-- **LeetCode**: [leetcode](https://leetcode.com/u/yhqz/)  
+<div align="center" style="margin-top: 10px;">
+
+<a href="mailto:rupareluttkarsh2309@gmail.com">
+  <img src="https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+</a>
+<a href="https://www.linkedin.com/in/uttkarsh-ruparel/">
+  <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+</a>
+<a href="https://uttkarsh-ruparel.vercel.app/">
+  <img src="https://img.shields.io/badge/Portfolio-Visit-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio"/>
+</a>
+<a href="https://leetcode.com/u/yhqz/">
+  <img src="https://img.shields.io/badge/LeetCode-Profile-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode"/>
+</a>
+
+</div>
+
+
+
+
