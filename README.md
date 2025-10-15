@@ -96,4 +96,3 @@ Symbiosis Institute of Technology, Pune (2023–2027)
 [![LeetCode](https://img.shields.io/badge/LeetCode-FFA116.svg?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/yhqz/)
 
 </div>
-
