@@ -17,7 +17,7 @@
 
 <br>
 
-## Who I Am
+## Who Am I
 
 A passionate Computer Science undergrad with a drive for building **production-grade, scalable systems**. I thrive at the intersection of **full-stack development, cloud infrastructure, and algorithmic problem-solving**. 
 
