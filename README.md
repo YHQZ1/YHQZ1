@@ -27,7 +27,7 @@ My focus lies in creating robust backend architectures, designing efficient APIs
 
 <div align="center">
 
-## Technical Arsenal
+## Core Competencies
 
 </div>
 
