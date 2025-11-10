@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,50:764ba2,100:f093fb&height=200&section=header&text=Uttkarsh%20Ruparel&fontSize=48&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=Full-Stack%20Developer%20%7C%20Cloud%20Architect%20%7C%20Problem%20Solver&descAlignY=51&descSize=18" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Uttkarsh%20Ruparel&fontSize=48&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=Full-Stack%20Developer%20%7C%20Cloud%20Architect%20%7C%20Problem%20Solver&descAlignY=51&descSize=18" width="100%"/>
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=667eea&center=true&vCenter=true&width=700&lines=Crafting+Scalable+Full-Stack+Solutions;Architecting+Cloud-Native+Systems;Building+High-Performance+APIs;Solving+Complex+Algorithmic+Challenges)](https://git.io/typing-svg)
 
@@ -159,7 +159,7 @@ Advancing data structures & algorithms expertise through competitive programming
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/uttkarsh-ruparel/)
 [![Email](https://img.shields.io/badge/Gmail-D14836.svg?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rupareluttkarsh2309@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-%23667eea.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://uttkarsh-ruparel.vercel.app/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-%232c5364.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://uttkarsh-ruparel.vercel.app/)
 [![LeetCode](https://img.shields.io/badge/LeetCode-FFA116.svg?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/yhqz/)
 
 <br>
@@ -171,8 +171,8 @@ Advancing data structures & algorithms expertise through competitive programming
 
 <br>
 
-![Profile Views](https://komarev.com/ghpvc/?username=uttkarshruparel&color=667eea&style=flat-square&label=Profile+Views)
+![Profile Views](https://komarev.com/ghpvc/?username=uttkarshruparel&color=2c5364&style=flat-square&label=Profile+Views)
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,50:764ba2,100:f093fb&height=120&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=120&section=footer" width="100%"/>
 
 </div>
