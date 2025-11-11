@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Uttkarsh%20Ruparel&fontSize=48&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=APIs%20don%E2%80%99t%20judge%20you.%20Mine%20just%20return%20200s&descAlignY=51&descSize=18" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Uttkarsh%20Ruparel&fontSize=48&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=Full-Stack%20Developer%20%7C%20Cloud%20Architect%20%7C%20Problem%20Solver&descAlignY=51&descSize=18" width="100%"/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=667eea&center=true&vCenter=true&width=700&lines=I+build+systems+that+stay+up+even+when+product+managers+don%E2%80%99t;Breaking+things+fast,+fixing+them+faster,+scaling+them+anyway;APIs+so+fast+they+finish+before+you+send+the+request;My+microservices+talk+to+each+other+more+politely+than+most+humans)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=667eea&center=true&vCenter=true&width=700&lines=Crafting+Scalable+Full-Stack+Solutions;Architecting+Cloud-Native+Systems;Building+High-Performance+APIs;Solving+Complex+Algorithmic+Challenges)](https://git.io/typing-svg)
 
 </div>
 
@@ -176,3 +176,4 @@ Advancing data structures & algorithms expertise through competitive programming
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=120&section=footer" width="100%"/>
 
 </div>
+
