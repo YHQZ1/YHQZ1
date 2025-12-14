@@ -109,32 +109,53 @@ AWS cloud architecture, Cloudflare edge networking and CDN, Vercel and Render de
 
 ## GITHUB METRICS
 
-<div align="center">
+<table align="center" width="100%" cellpadding="0" cellspacing="0">
+  <!-- Metric 1 -->
+  <tr>
+    <td align="center">
+      <img
+        width="900"
+        src="https://github-readme-stats.vercel.app/api?username=yhqz1&show_icons=true&theme=dark&hide_border=true"
+      />
+    </td>
+  </tr>
 
-<a href="https://github.com/yhqz1">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=yhqz1&show_icons=true&theme=dark&include_all_commits=true&count_private=true&hide_border=true&bg_color=000000&title_color=58a6ff&icon_color=1f6feb&text_color=c9d1d9&border_radius=0"/>
-</a>
-<a href="https://github.com/yhqz1">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yhqz1&layout=compact&theme=dark&hide_border=true&bg_color=000000&title_color=58a6ff&text_color=c9d1d9&border_radius=0&langs_count=8"/>
-</a>
+  <tr><td height="16"></td></tr>
 
-</div>
+  <!-- Metric 2 + 3 -->
+  <tr>
+    <td align="center">
+      <table cellpadding="0" cellspacing="0">
+        <tr>
+          <td align="center" valign="top" width="450">
+            <img
+              width="430"
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=yhqz1&layout=compact&theme=dark&hide_border=true&langs_count=8"
+            />
+          </td>
+          <td align="center" valign="top" width="450">
+            <img
+              width="430"
+              src="https://streak-stats.demolab.com?user=yhqz1&theme=dark&hide_border=true"
+            />
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 
-<div align="center">
+  <tr><td height="16"></td></tr>
 
-<a href="https://github.com/yhqz1">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=yhqz1&theme=dark&hide_border=true&background=000000&stroke=58a6ff&ring=1f6feb&fire=58a6ff&currStreakNum=c9d1d9&sideNums=c9d1d9&currStreakLabel=c9d1d9&sideLabels=c9d1d9&dates=8b949e&border_radius=0" alt="GitHub Streak"/>
-</a>
-
-</div>
-
-<div align="center">
-
-<a href="https://github.com/yhqz1">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=yhqz1&bg_color=000000&color=58a6ff&line=1f6feb&point=58a6ff&area=true&hide_border=true&custom_title=Contribution%20Graph&area_color=0d1117&radius=0" alt="Activity Graph"/>
-</a>
-
-</div>
+  <!-- Metric 4 -->
+  <tr>
+    <td align="center">
+      <img
+        width="900"
+        src="https://github-readme-activity-graph.vercel.app/graph?username=yhqz1&bg_color=000000&color=58a6ff&line=1f6feb&point=58a6ff&area=true&hide_border=true&custom_title=Contribution%20Graph&radius=0"
+      />
+    </td>
+  </tr>
+</table>
 
 <br>
 
