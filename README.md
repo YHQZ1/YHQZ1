@@ -148,7 +148,7 @@ Go            ████                 Beginner     │ Backend Services
 <table>
   <tr>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/amazonaws/232F3E" width="48" height="48" alt="AWS" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1280px-Amazon_Web_Services_Logo.svg.png" width="48" height="48" alt="AWS" />
       <br>AWS
     </td>
     <td align="center" width="96">
