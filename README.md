@@ -8,6 +8,7 @@
 ╚██████╔╝   ██║      ██║   ██║  ██╗██║  ██║██║  ██║███████║██║  ██║
  ╚═════╝    ╚═╝      ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
 ```
+
 <br>
 
 <a href="https://www.linkedin.com/in/uttkarsh-ruparel/">
@@ -33,6 +34,7 @@ Computer Science undergraduate with a backend-first focus, working on scalable s
 Interested in clean architecture, distributed systems fundamentals, and building systems that behave predictably under load.
 
 ---
+
 ## Technical Expertise
 
 ### Languages & Fundamentals
