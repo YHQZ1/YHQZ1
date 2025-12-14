@@ -106,56 +106,34 @@ AWS cloud architecture, Cloudflare edge networking and CDN, Vercel and Render de
 </div>
 
 <br>
-
 ## GITHUB METRICS
 
-<table align="center" width="100%" cellpadding="0" cellspacing="0">
-  <!-- Metric 1 -->
-  <tr>
-    <td align="center">
-      <img
-        width="900"
-        src="https://github-readme-stats.vercel.app/api?username=yhqz1&show_icons=true&theme=dark&hide_border=true"
-      />
-    </td>
-  </tr>
+<div align="center">
+  <img
+    width="900"
+    src="https://github-readme-stats.vercel.app/api?username=yhqz1&show_icons=true&theme=dark&hide_border=true"
+  />
+</div>
 
-  <tr><td height="16"></td></tr>
+<br>
 
-  <!-- Metric 2 + 3 -->
-  <tr>
-    <td align="center">
-      <table cellpadding="0" cellspacing="0">
-        <tr>
-          <td align="center" valign="top" width="450">
-            <img
-              width="430"
-              src="https://github-readme-stats.vercel.app/api/top-langs/?username=yhqz1&layout=compact&theme=dark&hide_border=true&langs_count=8"
-            />
-          </td>
-          <td align="center" valign="top" width="450">
-            <img
-              width="430"
-              src="https://streak-stats.demolab.com?user=yhqz1&theme=dark&hide_border=true"
-            />
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
+<div align="center">
+  <img
+    width="900"
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=yhqz1&layout=compact&theme=dark&hide_border=true&langs_count=8"
+  />
+</div>
 
-  <tr><td height="16"></td></tr>
+<br>
 
-  <!-- Metric 4 -->
-  <tr>
-    <td align="center">
-      <img
-        width="900"
-        src="https://github-readme-activity-graph.vercel.app/graph?username=yhqz1&bg_color=000000&color=58a6ff&line=1f6feb&point=58a6ff&area=true&hide_border=true&custom_title=Contribution%20Graph&radius=0"
-      />
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <img
+    width="900"
+    src="https://github-readme-activity-graph.vercel.app/graph?username=yhqz1&bg_color=000000&color=58a6ff&line=1f6feb&point=58a6ff&area=true&hide_border=true&custom_title=Contribution%20Graph&radius=0"
+  />
+</div>
+
+
 
 <br>
 
