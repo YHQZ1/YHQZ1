@@ -36,9 +36,9 @@ Interested in clean architecture, distributed systems fundamentals, and building
 
 ## Technical Expertise
 
-### Languages & Core
-```
+### Languages & Fundamentals
 
+```
 Java          ████████████████████ Advanced     │ Backend, System Design, DSA
 JavaScript    ████████████████████ Advanced     │ APIs, Node.js
 TypeScript    ███████████████      Intermediate │ Type-safe services
@@ -47,197 +47,89 @@ C/C++         ███████████████      Intermediate �
 SQL           ████████████████████ Advanced     │ Query Optimization
 Bash          ███████████████      Intermediate │ DevOps, CI/CD
 Go            ████                 Beginner     │ Backend Services
-
 ```
 
-### Backend & APIs
+---
+
+### Backend & Systems
+
 <table>
   <tr>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/nodedotjs/339933" width="48" height="48"/>
-      <br>Node.js
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/express/000000" width="48" height="48"/>
-      <br>Express.js
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/fastapi/009688" width="48" height="48"/>
-      <br>FastAPI
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/flask/000000" width="48" height="48"/>
-      <br>Flask
-    </td>
-    <td align="center" width="96">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg" width="48" height="48"/>
-      <br>GraphQL
-    </td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/nodedotjs/339933" width="48"/><br>Node.js</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/express/000000" width="48"/><br>Express</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/fastapi/009688" width="48"/><br>FastAPI</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/flask/000000" width="48"/><br>Flask</td>
+    <td align="center" width="96"><img src="https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg" width="48"/><br>GraphQL</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/postgresql/4169E1" width="48"/><br>PostgreSQL</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/mongodb/47A248" width="48"/><br>MongoDB</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/apachecassandra/1287B1" width="48"/><br>Cassandra</td>
+    <td align="center" width="96"><img src="https://www.svgrepo.com/show/303460/redis-logo.svg" width="48"/><br>Redis</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/apachekafka/231F20" width="48"/><br>Kafka</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/prisma/2D3748" width="48"/><br>Prisma</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/supabase/3FCF8E" width="48"/><br>Supabase</td>
   </tr>
 </table>
 
-### Databases & Data
+---
+
+### Cloud & DevOps
+
 <table>
   <tr>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/postgresql/4169E1" width="48" height="48"/>
-      <br>PostgreSQL
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1280px-Amazon_Web_Services_Logo.svg.png" width="48"/><br>AWS
     </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/mongodb/47A248" width="48" height="48"/>
-      <br>MongoDB
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/apachecassandra/1287B1" width="48" height="48"/>
-      <br>Cassandra
-    </td>
-    <td align="center" width="96">
-      <img src="https://www.svgrepo.com/show/303460/redis-logo.svg" width="48" height="48"/>
-      <br>Redis
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/prisma/2D3748" width="48" height="48"/>
-      <br>Prisma
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/supabase/3FCF8E" width="48" height="48"/>
-      <br>Supabase
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/apachekafka/231F20" width="48" height="48"/>
-      <br>Kafka
-    </td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/cloudflare/F38020" width="48"/><br>Cloudflare</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/vercel/000000" width="48"/><br>Vercel</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/render/46E3B7" width="48"/><br>Render</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/docker/2496ED" width="48"/><br>Docker</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/kubernetes/326CE5" width="48"/><br>Kubernetes</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/linux/FCC624" width="48"/><br>Linux</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/nginx/009639" width="48"/><br>NGINX</td>
+    <td align="center" width="96"><img src="https://www.jenkins.io/images/logo_128.png" width="48"/><br>Jenkins</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/githubactions/2088FF" width="48"/><br>Actions</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/git/F05032" width="48"/><br>Git</td>
   </tr>
 </table>
 
-### DevOps & Infrastructure
+---
+
+### Frontend
+
 <table>
   <tr>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/docker/2496ED" width="48" height="48"/>
-      <br>Docker
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/kubernetes/326CE5" width="48" height="48"/>
-      <br>Kubernetes
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/linux/FCC624" width="48" height="48"/>
-      <br>Linux
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/nginx/009639" width="48" height="48"/>
-      <br>NGINX
-    </td>
-    <td align="center" width="96">
-      <img src="https://www.jenkins.io/images/logo_128.png" width="48" height="48"/>
-      <br>Jenkins
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/githubactions/2088FF" width="48" height="48"/>
-      <br>Actions
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/git/F05032" width="48" height="48"/>
-      <br>Git
-    </td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/react/61DAFB" width="48"/><br>React</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/nextdotjs/000000" width="48"/><br>Next.js</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" width="48"/><br>Tailwind</td>
   </tr>
 </table>
 
-### Cloud & Deployment
+---
+
+### Tooling
+
 <table>
   <tr>
-    <td align="center" width="96">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1280px-Amazon_Web_Services_Logo.svg.png" width="48" height="48" alt="AWS" />
-      <br>AWS
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/cloudflare/F38020" width="48" height="48" alt="Cloudflare" />
-      <br>Cloudflare
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/vercel/000000" width="48" height="48" alt="Vercel" />
-      <br>Vercel
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/render/46E3B7" width="48" height="48" alt="Render" />
-      <br>Render
-    </td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/postman/FF6C37" width="48"/><br>Postman</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/curl/073551" width="48"/><br>cURL</td>
+    <td align="center" width="96"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" width="48"/><br>VS Code</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/n8n/E74243" width="48"/><br>n8n</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/github/181717" width="48"/><br>GitHub</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/jira/0052CC" width="48"/><br>Jira</td>
+    <td align="center" width="96"><img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" width="48"/><br>Notion</td>
   </tr>
 </table>
 
+---
 
-### Frontend Stack
+### Data Analysis & Visualization
+
 <table>
   <tr>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/react/61DAFB" width="48" height="48"/>
-      <br>React
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/nextdotjs/000000" width="48" height="48"/>
-      <br>Next.js
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" width="48" height="48"/>
-      <br>Tailwind
-    </td>
-  </tr>
-</table>
-
-### Data Science & ML
-<table>
-  <tr>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/numpy/013243" width="48" height="48"/>
-      <br>NumPy
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/pandas/150458" width="48" height="48"/>
-      <br>Pandas
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/plotly/3F4F75" width="48" height="48"/>
-      <br>Matplotlib
-    </td>
-    <td align="center" width="96">
-      <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" width="48" height="48"/>
-      <br>Seaborn
-    </td>
-  </tr>
-</table>
-
-### Development Tools
-<table>
-  <tr>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/postman/FF6C37" width="48" height="48"/>
-      <br>Postman
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/curl/073551" width="48" height="48"/>
-      <br>cURL
-    </td>
-    <td align="center" width="96">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" width="48" height="48"/>
-      <br>VS Code
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/n8n/E74243" width="48" height="48"/>
-      <br>n8n
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/github/181717" width="48" height="48"/>
-      <br>GitHub
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/jira/0052CC" width="48" height="48"/>
-      <br>Jira
-    </td>
-    <td align="center" width="96">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" width="48" height="48"/>
-      <br>Notion
-    </td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/numpy/013243" width="48"/><br>NumPy</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/pandas/150458" width="48"/><br>Pandas</td>
+    <td align="center" width="96"><img src="https://cdn.simpleicons.org/plotly/3F4F75" width="48"/><br>Matplotlib</td>
+    <td align="center" width="96"><img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" width="48"/><br>Seaborn</td>
   </tr>
 </table>
 
