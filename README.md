@@ -1,29 +1,29 @@
-<h1 align="center">Uttkarsh Ruparel</h1>
-<h3 align="center">Backend Engineer · DevOps & Systems</h3>
+<div align="center">
 
-<p align="center">
-  <code>Computer Science Undergraduate</code> · <code>YHQZ1</code> · <code>India</code>
-</p>
+```
+██╗   ██╗████████╗████████╗██╗  ██╗ █████╗ ██████╗ ███████╗██╗  ██╗
+██║   ██║╚══██╔══╝╚══██╔══╝██║ ██╔╝██╔══██╗██╔══██╗██╔════╝██║  ██║
+██║   ██║   ██║      ██║   █████╔╝ ███████║██████╔╝███████╗███████║
+██║   ██║   ██║      ██║   ██╔═██╗ ██╔══██║██╔══██╗╚════██║██╔══██║
+╚██████╔╝   ██║      ██║   ██║  ██╗██║  ██║██║  ██║███████║██║  ██║
+ ╚═════╝    ╚═╝      ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+```
+<br>
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/uttkarsh-ruparel/">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white"/>
-  </a>
-  <a href="mailto:rupareluttkarsh2309@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-EA4335?style=flat-square&logo=gmail&logoColor=white"/>
-  </a>
-  <a href="https://uttkarsh-ruparel.vercel.app/">
-    <img src="https://img.shields.io/badge/Portfolio-000000?style=flat-square&logo=vercel&logoColor=white"/>
-  </a>
-  <a href="https://leetcode.com/u/yhqz/">
-    <img src="https://img.shields.io/badge/LeetCode-FFA116?style=flat-square&logo=leetcode&logoColor=white"/>
-  </a>
-</p>
+<a href="https://www.linkedin.com/in/uttkarsh-ruparel/">
+  <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+<a href="mailto:rupareluttkarsh2309@gmail.com">
+  <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
+</a>
+<a href="https://uttkarsh-ruparel.vercel.app/">
+  <img src="https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white"/>
+</a>
+<a href="https://leetcode.com/u/yhqz/">
+  <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=LeetCode&logoColor=black"/>
+</a>
 
-<pre align="center">
-Building scalable backend systems and infrastructure
-Distributed services · API design · CI/CD · Cloud-native systems
-</pre>
+</div>
 
 ---
 
