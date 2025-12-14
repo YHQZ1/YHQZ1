@@ -28,14 +28,15 @@
 
 ---
 
-## About
+# About
 
-Computer Science undergraduate with a backend-first focus, working on scalable services, APIs, databases, and infrastructure automation.  
-Interested in clean architecture, distributed systems fundamentals, and building systems that behave predictably under load.
+Computer Science undergraduate focused on backend engineering and system fundamentals. I work on building scalable services, well-structured APIs, and data-driven systems with an emphasis on reliability and clarity.
+
+I’m particularly interested in clean architecture, distributed systems concepts, and infrastructure that behaves consistently under pressure. I value thoughtful design, strong fundamentals, and systems that don’t fall apart when things get real.
 
 ---
 
-## Technical Expertise
+# Technical Expertise
 
 ### Languages & Fundamentals
 
@@ -49,8 +50,6 @@ SQL           ██████████████████████
 Bash          ████████████████████████████████████████ Intermediate                             │ DevOps, CI/CD
 Go            ████████████████████ Beginner                                                     │ Backend Services
 ```
-
----
 
 ### Backend & Systems
 
@@ -107,8 +106,6 @@ Go            ████████████████████ Begin
   </tr>
 </table>
 
----
-
 ### Cloud & DevOps
 
 <table>
@@ -160,8 +157,6 @@ Go            ████████████████████ Begin
   </tr>
 </table>
 
----
-
 ### Frontend
 
 <table>
@@ -180,8 +175,6 @@ Go            ████████████████████ Begin
     </td>
   </tr>
 </table>
-
----
 
 ### Tooling
 
@@ -218,8 +211,6 @@ Go            ████████████████████ Begin
   </tr>
 </table>
 
----
-
 ### Data Analysis & Visualization
 
 <table>
@@ -245,14 +236,30 @@ Go            ████████████████████ Begin
 
 ---
 
-## Activity
+# Activity
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=YHQZ1&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=58a6ff"
-       width="420" height="180"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YHQZ1&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9"
-       width="420" height="180"/>
-</p>
+<table align="center">
+  <tr>
+    <td>
+      <img src="https://github-readme-stats.vercel.app/api?username=YHQZ1&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=58a6ff"
+           width="420" height="180"/>
+    </td>
+    <td>
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YHQZ1&layout=compact&hide=html,css,dockerfile,plpgsql&langs_count=6&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9"
+           width="420" height="180"/>
+    </td>
+  </tr>
+</table>
+
+<table align="center">
+  <tr>
+    <td align="center" width="890">
+      <img src="https://github-readme-activity-graph.vercel.app/graph?username=YHQZ1&theme=github-dark&hide_border=true&bg_color=0d1117&color=58a6ff&line=58a6ff&point=c9d1d9&area=true&area_color=0d1117"
+           width="860"/>
+    </td>
+  </tr>
+</table>
+
 
 <p align="center">
   <sub>Focused on building backend systems that scale cleanly and deploy reliably.</sub>
