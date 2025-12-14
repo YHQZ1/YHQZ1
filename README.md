@@ -148,31 +148,24 @@ Go            ████                 Beginner     │ Backend Services
 <table>
   <tr>
     <td align="center" width="96">
-      <img src="https://a.b.cdn.console.awsstatic.com/a/v1/RHSMMGZKYJXPPNI2IOC6Z63HJEW4FD5ZYMKJSXD7HQ5IPUTQR2TQ/icon/d88319dfa5d204f019b4284149886c59.svg" width="48" height="48"/>
-      <br>EC2
+      <img src="https://cdn.simpleicons.org/amazonaws/232F3E" width="48" height="48" alt="AWS" />
+      <br>AWS
     </td>
     <td align="center" width="96">
-      <img src="https://a.b.cdn.console.awsstatic.com/a/v1/6JW3RZSXOZ4EFR2HZBU6IIOCUZEIFKRK6JZDCUDHQVQXRMAORYWQ/icon/1d374ed2a6bcf601d7bfd4fc3dfd3b5d.svg" width="48" height="48"/>
-      <br>RDS
-    </td>
-    <td align="center" width="96">
-      <img src="https://a.b.cdn.console.awsstatic.com/a/v1/DKY2SIL5N3MJQCULDNOQE7TKLNQIUXRSOHBJKJGQAHLZO7TLH3TQ/icon/c0828e0381730befd1f7a025057c74fb.svg" width="48" height="48"/>
-      <br>S3
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/cloudflare/F38020" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/cloudflare/F38020" width="48" height="48" alt="Cloudflare" />
       <br>Cloudflare
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/vercel/000000" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/vercel/000000" width="48" height="48" alt="Vercel" />
       <br>Vercel
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/render/46E3B7" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/render/46E3B7" width="48" height="48" alt="Render" />
       <br>Render
     </td>
   </tr>
 </table>
+
 
 ### Frontend Stack
 <table>
