@@ -259,8 +259,3 @@ Go            ████████████████████ Begin
     </td>
   </tr>
 </table>
-
-
-<p align="center">
-  <sub>Focused on building backend systems that scale cleanly and deploy reliably.</sub>
-</p>
