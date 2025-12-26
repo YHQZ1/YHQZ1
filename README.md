@@ -241,15 +241,20 @@ Go            ████████████████████ Begin
 <table align="center">
   <tr>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api?username=YHQZ1&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=58a6ff"
-           width="420" height="180"/>
+      <img
+        src="https://github-readme-stats-39i6.vercel.app/api?username=YHQZ1&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=58a6ff&cache_seconds=21600"
+        width="420" height="180"
+      />
     </td>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YHQZ1&layout=compact&hide=html,css,dockerfile,plpgsql&langs_count=6&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9"
-           width="420" height="180"/>
+      <img
+        src="https://github-readme-stats-39i6.vercel.app/api/top-langs/?username=YHQZ1&layout=compact&hide=html,css,dockerfile,plpgsql&langs_count=6&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&cache_seconds=21600"
+        width="420" height="180"
+      />
     </td>
   </tr>
 </table>
+
 
 <table align="center">
   <tr>
