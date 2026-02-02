@@ -1,7 +1,6 @@
 <div align="center">
-
 <h1>
- Uttkarsh Ruparel
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=45&duration=2000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=UTTKARSH+RUPAREL" alt="Typing SVG" />
 </h1>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/uttkarsh-ruparel/)
