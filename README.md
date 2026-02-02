@@ -10,13 +10,9 @@
 
 </div>
 
----
-
 Computer Science undergraduate focused on backend engineering and system fundamentals. I work on building scalable services, well-structured APIs, and data-driven systems with an emphasis on reliability and clarity.
 
 I’m particularly interested in clean architecture, distributed systems concepts, and infrastructure that behaves consistently under pressure. I value thoughtful design, strong fundamentals, and systems that don’t fall apart when things get real.
-
----
 
 # Technical Expertise
 
