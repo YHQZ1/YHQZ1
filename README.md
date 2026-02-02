@@ -8,28 +8,7 @@
 ╚██████╔╝   ██║      ██║   ██║  ██╗██║  ██║██║  ██║███████║██║  ██║
  ╚═════╝    ╚═╝      ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
 ```
-
-<br>
-
-<a href="https://www.linkedin.com/in/uttkarsh-ruparel/">
-  <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"/>
-</a>
-<a href="mailto:rupareluttkarsh2309@gmail.com">
-  <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
-</a>
-<a href="https://uttkarsh-ruparel.vercel.app/">
-  <img src="https://img.shields.io/badge/Portfolio-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white"/>
-</a>
-<a href="https://leetcode.com/u/yhqz/">
-  <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=LeetCode&logoColor=black"/>
-</a>
-
 </div>
-
----
-
-# About
-
 Computer Science undergraduate focused on backend engineering and system fundamentals. I work on building scalable services, well-structured APIs, and data-driven systems with an emphasis on reliability and clarity.
 
 I’m particularly interested in clean architecture, distributed systems concepts, and infrastructure that behaves consistently under pressure. I value thoughtful design, strong fundamentals, and systems that don’t fall apart when things get real.
@@ -64,6 +43,10 @@ Go            ████████████████████ Begin
       <br>Express.js
     </td>
     <td align="center" width="96">
+     <img src="https://cdn.simpleicons.org/fastify/000000" width="48" height="48"/>
+     <br>Fastify
+    </td>
+    <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/fastapi/009688" width="48" height="48"/>
       <br>FastAPI
     </td>
@@ -84,10 +67,6 @@ Go            ████████████████████ Begin
       <br>MongoDB
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/apachecassandra/1287B1" width="48" height="48"/>
-      <br>Cassandra
-    </td>
-    <td align="center" width="96">
       <img src="https://www.svgrepo.com/show/303460/redis-logo.svg" width="48" height="48"/>
       <br>Redis
     </td>
@@ -102,6 +81,10 @@ Go            ████████████████████ Begin
     <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/apachekafka/231F20" width="48" height="48"/>
       <br>Kafka
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/rabbitmq/FF6600" width="48" height="48"/>
+      <br>RabbitMQ
     </td>
   </tr>
 </table>
@@ -135,16 +118,24 @@ Go            ████████████████████ Begin
       <br>Kubernetes
     </td>
     <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/terraform/7B42BC" width="48" height="48"/>
+      <br>Terraform
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/prometheus/E6522C" width="48" height="48"/>
+      <br>Prometheus
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/grafana/F46800" width="48" height="48"/>
+      <br>Grafana
+    </td>
+    <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/linux/FCC624" width="48" height="48"/>
       <br>Linux
     </td>
     <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/nginx/009639" width="48" height="48"/>
       <br>NGINX
-    </td>
-    <td align="center" width="96">
-      <img src="https://www.jenkins.io/images/logo_128.png" width="48" height="48"/>
-      <br>Jenkins
     </td>
     <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/githubactions/2088FF" width="48" height="48"/>
@@ -189,12 +180,12 @@ Go            ████████████████████ Begin
       <br>cURL
     </td>
     <td align="center" width="96">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" width="48" height="48"/>
-      <br>VS Code
+      <img src="https://cdn.simpleicons.org/jest/C21325" width="48" height="48"/>
+      <br>Jest
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/n8n/E74243" width="48" height="48"/>
-      <br>n8n
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" width="48" height="48"/>
+      <br>VS Code
     </td>
     <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/github/181717" width="48" height="48"/>
@@ -207,29 +198,6 @@ Go            ████████████████████ Begin
     <td align="center" width="96">
       <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" width="48" height="48"/>
       <br>Notion
-    </td>
-  </tr>
-</table>
-
-### Data Analysis & Visualization
-
-<table>
-  <tr>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/numpy/013243" width="48" height="48"/>
-      <br>NumPy
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/pandas/150458" width="48" height="48"/>
-      <br>Pandas
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/plotly/3F4F75" width="48" height="48"/>
-      <br>Matplotlib
-    </td>
-    <td align="center" width="96">
-      <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" width="48" height="48"/>
-      <br>Seaborn
     </td>
   </tr>
 </table>
