@@ -38,11 +38,11 @@ Go            ████████████████████ Begin
       <br>Node.js
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/express/000000" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/express/FFFFFF" width="48" height="48"/>
       <br>Express.js
     </td>
     <td align="center" width="96">
-     <img src="https://cdn.simpleicons.org/fastify/000000" width="48" height="48"/>
+     <img src="https://cdn.simpleicons.org/fastify/FFFFFF" width="48" height="48"/>
      <br>Fastify
     </td>
     <td align="center" width="96">
@@ -50,11 +50,11 @@ Go            ████████████████████ Begin
       <br>FastAPI
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/flask/000000" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/flask/FFFFFF" width="48" height="48"/>
       <br>Flask
     </td>
     <td align="center" width="96">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/graphql/E10098" width="48" height="48"/>
       <br>GraphQL
     </td>
     <td align="center" width="96">
@@ -66,7 +66,7 @@ Go            ████████████████████ Begin
       <br>MongoDB
     </td>
     <td align="center" width="96">
-      <img src="https://www.svgrepo.com/show/303460/redis-logo.svg" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/redis/FF4438" width="48" height="48"/>
       <br>Redis
     </td>
     <td align="center" width="96">
@@ -78,7 +78,7 @@ Go            ████████████████████ Begin
       <br>Supabase
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/apachekafka/231F20" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/apachekafka/FFFFFF" width="48" height="48"/>
       <br>Kafka
     </td>
     <td align="center" width="96">
@@ -93,7 +93,7 @@ Go            ████████████████████ Begin
 <table>
   <tr>
     <td align="center" width="96">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1280px-Amazon_Web_Services_Logo.svg.png" width="48" height="48"/>
+      <img src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/aws-color.png" width="48" height="48"/>
       <br>AWS
     </td>
     <td align="center" width="96">
@@ -140,10 +140,6 @@ Go            ████████████████████ Begin
       <img src="https://cdn.simpleicons.org/githubactions/2088FF" width="48" height="48"/>
       <br>Actions
     </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/git/F05032" width="48" height="48"/>
-      <br>Git
-    </td>
   </tr>
 </table>
 
@@ -156,7 +152,7 @@ Go            ████████████████████ Begin
       <br>React
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/nextdotjs/000000" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/nextdotjs/FFFFFF" width="48" height="48"/>
       <br>Next.js
     </td>
     <td align="center" width="96">
@@ -183,19 +179,11 @@ Go            ████████████████████ Begin
       <br>Jest
     </td>
     <td align="center" width="96">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" width="48" height="48"/>
-      <br>VS Code
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/github/181717" width="48" height="48"/>
-      <br>GitHub
-    </td>
-    <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/jira/0052CC" width="48" height="48"/>
       <br>Jira
     </td>
     <td align="center" width="96">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/notion/FFFFFF" width="48" height="48"/>
       <br>Notion
     </td>
   </tr>
