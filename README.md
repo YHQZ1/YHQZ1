@@ -182,10 +182,6 @@ Go            ████████████████████ Begin
       <img src="https://cdn.simpleicons.org/jira/0052CC" width="48" height="48"/>
       <br>Jira
     </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/notion/FFFFFF" width="48" height="48"/>
-      <br>Notion
-    </td>
   </tr>
 </table>
 
