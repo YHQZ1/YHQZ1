@@ -19,14 +19,14 @@ I’m particularly interested in clean architecture, distributed systems concept
 ### Languages & Fundamentals
 
 ```
-Java          ████████████████████████████████████████████████████████████ Advanced             │ Backend, System Design, DSA
-JavaScript    ████████████████████████████████████████████████████████████ Advanced             │ APIs, Node.js
-TypeScript    ████████████████████████████████████████ Intermediate                             │ Type-safe services
-Python        ████████████████████████████████████████ Intermediate                             │ APIs, Automation
-C/C++         ████████████████████████████████████████ Intermediate                             │ System Programming
-SQL           ████████████████████████████████████████████████████████████ Advanced             │ Query Optimization
-Bash          ████████████████████████████████████████ Intermediate                             │ DevOps, CI/CD
-Go            ████████████████████ Beginner                                                     │ Backend Services
+Java          ██████████████████████████████████████████ Advanced             │ Backend, System Design, DSA
+JavaScript    ██████████████████████████████████████████ Advanced             │ APIs, Node.js
+TypeScript    ████████████████████████████ Intermediate                       │ Type-safe services
+Python        ████████████████████████████ Intermediate                       │ APIs, Automation
+C/C++         ████████████████████████████ Intermediate                       │ System Programming
+SQL           ██████████████████████████████████████████ Advanced             │ Query Optimization
+Bash          ████████████████████████████ Intermediate                       │ DevOps, CI/CD
+Go            ██████████████ Beginner                                         │ Backend Services
 ```
 
 ### Backend & Systems
