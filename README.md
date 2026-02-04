@@ -17,7 +17,7 @@ Computer Science undergraduate passionate about the fundamentals of backend engi
 ### Languages & Fundamentals
 
 ```
-Java          ██████████████████████████████████████████ Advanced             │ Backend, System Design, DSA
+Java          ██████████████████████████████████████████ Advanced             │ Backend, Competitive Programming, DSA
 JavaScript    ██████████████████████████████████████████ Advanced             │ APIs, Node.js
 TypeScript    ████████████████████████████ Intermediate                       │ Type-safe services
 Python        ████████████████████████████ Intermediate                       │ APIs, Automation
