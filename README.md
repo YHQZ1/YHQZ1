@@ -10,9 +10,7 @@
 
 </div>
 
-Computer Science undergraduate focused on backend engineering and system fundamentals. I work on building scalable services, well-structured APIs, and data-driven systems with an emphasis on reliability and clarity.
-
-I’m particularly interested in clean architecture, distributed systems concepts, and infrastructure that behaves consistently under pressure. I value thoughtful design, strong fundamentals, and systems that don’t fall apart when things get real.
+Computer Science undergraduate passionate about the fundamentals of backend engineering. I build scalable services and data-driven systems, with a keen interest in how clean architecture and distributed systems create software that's reliable when it matters most.
 
 # Technical Expertise
 
@@ -143,7 +141,7 @@ Go            ██████████████ Beginner               
   </tr>
 </table>
 
-### Frontend
+### Frontend & Tooling
 
 <table>
   <tr>
@@ -159,19 +157,12 @@ Go            ██████████████ Beginner               
       <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" width="48" height="48"/>
       <br>Tailwind
     </td>
-  </tr>
-</table>
-
-### Tooling
-
-<table>
-  <tr>
     <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/postman/FF6C37" width="48" height="48"/>
       <br>Postman
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/curl/073551" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/curl/FFFFFF" width="48" height="48"/>
       <br>cURL
     </td>
     <td align="center" width="96">
@@ -204,7 +195,7 @@ Go            ██████████████ Beginner               
       />
     </td>
   </tr>
-</table
+</table>
 
 <table align="center">
   <tr>
