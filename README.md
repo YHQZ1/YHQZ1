@@ -17,14 +17,14 @@ Computer Science undergraduate passionate about the fundamentals of backend engi
 ### Languages & Fundamentals
 
 ```
-Java          ██████████████████████████████████████████ Advanced             │ Backend, Competitive Programming, DSA
-JavaScript    ██████████████████████████████████████████ Advanced             │ APIs, Node.js
-TypeScript    ████████████████████████████ Intermediate                       │ Type-safe services
-Python        ████████████████████████████ Intermediate                       │ APIs, Automation
-C/C++         ████████████████████████████ Intermediate                       │ System Programming
-SQL           ██████████████████████████████████████████ Advanced             │ Query Optimization
-Bash          ████████████████████████████ Intermediate                       │ DevOps, CI/CD
-Go            ██████████████ Beginner                                         │ Backend Services
+Java          ███████████████████████████████████████ Advanced             │ Backend, Competitive Programming, DSA
+JavaScript    ███████████████████████████████████████ Advanced             │ APIs, Node.js
+TypeScript    ██████████████████████████ Intermediate                      │ Type-safe services
+Python        ██████████████████████████ Intermediate                      │ APIs, Automation
+C/C++         ██████████████████████████ Intermediate                      │ System Programming
+SQL           ███████████████████████████████████████ Advanced             │ Query Optimization
+Bash          ██████████████████████████ Intermediate                      │ DevOps, CI/CD
+Go            █████████████ Beginner                                       │ Backend Services
 ```
 
 ### Backend & Systems
@@ -125,6 +125,10 @@ Go            ██████████████ Beginner               
     <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/grafana/F46800" width="48" height="48"/>
       <br>Grafana
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/datadog/632CA6" width="48" height="48"/>
+      <br>Datadog
     </td>
     <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/linux/FCC624" width="48" height="48"/>
