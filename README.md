@@ -9,24 +9,25 @@
 
 </div>
 
-Computer Science undergraduate passionate about the fundamentals of backend engineering. I build scalable services and data-driven systems, with a keen interest in how clean architecture and distributed systems create software that's reliable when it matters most.
+I'm a CS undergrad at SIT Pune, but my stack doesn't know that.
+Kafka, Kubernetes, distributed transactions, observability stacks —
+I build backend systems the way they're supposed to be built.
+Then I benchmark them.
 
 # Technical Expertise
 
-### Languages & Fundamentals
+### Languages
 
 ```
-Java          ███████████████████████████████████████ Advanced             │ Backend, Competitive Programming, DSA
-JavaScript    ███████████████████████████████████████ Advanced             │ APIs, Node.js
-TypeScript    ██████████████████████████ Intermediate                      │ Type-safe services
+TypeScript    ███████████████████████████████████████ Advanced             │ Type-safe Services, APIs
+JavaScript    ███████████████████████████████████████ Advanced             │ APIs, Node.js, Runtime Systems
+Go            ██████████████████████████ Intermediate                      │ Backend Services, Concurrency
+Java          ██████████████████████████ Intermediate                      │ OOP, DSA, JVM Ecosystem
 Python        ██████████████████████████ Intermediate                      │ APIs, Automation
-C/C++         ██████████████████████████ Intermediate                      │ System Programming
-SQL           ███████████████████████████████████████ Advanced             │ Query Optimization
-Bash          ██████████████████████████ Intermediate                      │ DevOps, CI/CD
-Go            █████████████ Beginner                                       │ Backend Services
+SQL           ██████████████████████████ Intermediate                      │ Query Optimization, Data Modeling
 ```
 
-### Backend & Systems
+### Backend & Distributed Systems
 
 <table>
   <tr>
@@ -35,20 +36,16 @@ Go            █████████████ Beginner                  
       <br>Node.js
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/express/FFFFFF" width="48" height="48"/>
-      <br>Express.js
+      <img src="https://cdn.simpleicons.org/go/00ADD8" width="48" height="48"/>
+      <br>Gin
     </td>
     <td align="center" width="96">
-     <img src="https://cdn.simpleicons.org/fastify/FFFFFF" width="48" height="48"/>
-     <br>Fastify
+      <img src="https://cdn.simpleicons.org/nestjs/E0234E" width="48" height="48"/>
+      <br>NestJS
     </td>
     <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/fastapi/009688" width="48" height="48"/>
       <br>FastAPI
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/flask/FFFFFF" width="48" height="48"/>
-      <br>Flask
     </td>
     <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/graphql/E10098" width="48" height="48"/>
@@ -59,20 +56,8 @@ Go            █████████████ Beginner                  
       <br>PostgreSQL
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/mongodb/47A248" width="48" height="48"/>
-      <br>MongoDB
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/redis/FF4438" width="48" height="48"/>
+      <img src="https://www.svgrepo.com/show/303460/redis-logo.svg" width="48" height="48"/>
       <br>Redis
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/prisma/2D3748" width="48" height="48"/>
-      <br>Prisma
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/supabase/3FCF8E" width="48" height="48"/>
-      <br>Supabase
     </td>
     <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/apachekafka/FFFFFF" width="48" height="48"/>
@@ -82,28 +67,20 @@ Go            █████████████ Beginner                  
       <img src="https://cdn.simpleicons.org/rabbitmq/FF6600" width="48" height="48"/>
       <br>RabbitMQ
     </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/elasticsearch/005571" width="48" height="48"/>
+      <br>Elasticsearch
+    </td>
   </tr>
 </table>
 
-### Cloud & DevOps
+### Cloud, DevOps & Observability
 
 <table>
   <tr>
     <td align="center" width="96">
       <img src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/aws-color.png" width="48" height="48"/>
       <br>AWS
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/cloudflare/F38020" width="48" height="48"/>
-      <br>Cloudflare
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/vercel/000000" width="48" height="48"/>
-      <br>Vercel
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/render/46E3B7" width="48" height="48"/>
-      <br>Render
     </td>
     <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/docker/2496ED" width="48" height="48"/>
@@ -118,6 +95,22 @@ Go            █████████████ Beginner                  
       <br>Terraform
     </td>
     <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/helm/87CEEB" width="48" height="48"/>
+      <br>Helm
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/argo/EF7B4D" width="48" height="48"/>
+      <br>ArgoCD
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/nginx/009639" width="48" height="48"/>
+      <br>NGINX
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/kong/003459" width="48" height="48"/>
+      <br>Kong
+    </td>
+    <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/prometheus/E6522C" width="48" height="48"/>
       <br>Prometheus
     </td>
@@ -126,25 +119,25 @@ Go            █████████████ Beginner                  
       <br>Grafana
     </td>
     <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/opentelemetry/FFFFFF" width="48" height="48"/>
+      <br>OpenTelemetry
+    </td>
+    <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/datadog/632CA6" width="48" height="48"/>
       <br>Datadog
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/linux/FCC624" width="48" height="48"/>
-      <br>Linux
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/nginx/009639" width="48" height="48"/>
-      <br>NGINX
     </td>
     <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/githubactions/2088FF" width="48" height="48"/>
       <br>Actions
     </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/linux/FCC624" width="48" height="48"/>
+      <br>Linux
+    </td>
   </tr>
 </table>
 
-### Frontend & Tooling
+### Frontend & Testing
 
 <table>
   <tr>
@@ -161,20 +154,12 @@ Go            █████████████ Beginner                  
       <br>Tailwind
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/postman/FF6C37" width="48" height="48"/>
-      <br>Postman
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/curl/FFFFFF" width="48" height="48"/>
-      <br>cURL
-    </td>
-    <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/jest/C21325" width="48" height="48"/>
       <br>Jest
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/jira/0052CC" width="48" height="48"/>
-      <br>Jira
+      <img src="https://cdn.simpleicons.org/k6/FF6A00" width="48" height="48"/>
+      <br>k6
     </td>
   </tr>
 </table>
