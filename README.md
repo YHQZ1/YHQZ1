@@ -1,19 +1,31 @@
 <div align="center">
 
-  <img 
-    src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=45&duration=2000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=UTTKARSH+RUPAREL" 
-    alt="Typing SVG" 
-  />
-  
-  <a href="https://www.linkedin.com/in/uttkarsh-ruparel/">
-    <img src="https://skillicons.dev/icons?i=linkedin" height="42" />
-  </a>
-  <a href="https://uttkarsh.dev/">
-    <img src="https://uttkarsh.dev/favicon.ico" height="38" />
-  </a>
-  <a href="https://leetcode.com/u/yhqz/">
-    <img src="https://leetcode.com/favicon.ico" height="42" />
-  </a>
+<img 
+  src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=45&duration=2000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=UTTKARSH+RUPAREL" 
+  alt="Typing SVG" 
+/>
+
+<img 
+  src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&duration=0&pause=0&color=8B949E&center=true&vCenter=true&width=400&lines=developer+·+builder+·+problem+solver" 
+  alt="Tagline" 
+/>
+
+<br/>
+
+<a href="https://www.linkedin.com/in/uttkarsh-ruparel/">
+  <img src="https://skillicons.dev/icons?i=linkedin" height="36" />
+  &nbsp;<sub><font color="#8b949e">LinkedIn</font></sub>
+</a>
+&nbsp;&nbsp;&nbsp;
+<a href="https://uttkarsh.dev/">
+  <img src="https://uttkarsh.dev/favicon.ico" height="32" />
+  &nbsp;<sub><font color="#8b949e">Portfolio</font></sub>
+</a>
+&nbsp;&nbsp;&nbsp;
+<a href="https://leetcode.com/u/yhqz/">
+  <img src="https://leetcode.com/favicon.ico" height="36" />
+  &nbsp;<sub><font color="#8b949e">LeetCode</font></sub>
+</a>
 
 </div>
 
