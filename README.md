@@ -5,27 +5,9 @@
   alt="Typing SVG" 
 />
 
-<img 
-  src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&duration=0&pause=0&color=8B949E&center=true&vCenter=true&width=400&lines=developer+·+builder+·+problem+solver" 
-  alt="Tagline" 
-/>
-
-<br/>
-
-<a href="https://www.linkedin.com/in/uttkarsh-ruparel/">
-  <img src="https://skillicons.dev/icons?i=linkedin" height="36" />
-  &nbsp;<sub><font color="#8b949e">LinkedIn</font></sub>
-</a>
-&nbsp;&nbsp;&nbsp;
-<a href="https://uttkarsh.dev/">
-  <img src="https://uttkarsh.dev/favicon.ico" height="32" />
-  &nbsp;<sub><font color="#8b949e">Portfolio</font></sub>
-</a>
-&nbsp;&nbsp;&nbsp;
-<a href="https://leetcode.com/u/yhqz/">
-  <img src="https://leetcode.com/favicon.ico" height="36" />
-  &nbsp;<sub><font color="#8b949e">LeetCode</font></sub>
-</a>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/uttkarsh-ruparel/) 
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://uttkarsh.dev/) 
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/yhqz/)
 
 </div>
 
