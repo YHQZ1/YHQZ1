@@ -1,13 +1,23 @@
 <div align="center">
-<h1>
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=45&duration=2000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=UTTKARSH+RUPAREL" alt="Typing SVG" />
-</h1>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/uttkarsh-ruparel/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://uttkarsh.dev/)
-[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/yhqz/)
+  <img 
+    src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=45&duration=2000&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=UTTKARSH+RUPAREL" 
+    alt="Typing SVG" 
+  />
+  
+  <a href="https://www.linkedin.com/in/uttkarsh-ruparel/">
+    <img src="https://skillicons.dev/icons?i=linkedin" height="42" />
+  </a>
+  <a href="https://uttkarsh.dev/">
+    <img src="https://uttkarsh.dev/favicon.ico" height="38" />
+  </a>
+  <a href="https://leetcode.com/u/yhqz/">
+    <img src="https://leetcode.com/favicon.ico" height="42" />
+  </a>
 
 </div>
+
+<br/>
 
 I'm a CS undergrad at SIT Pune, but my stack doesn't know that.
 Kafka, Kubernetes, distributed transactions, observability stacks —
