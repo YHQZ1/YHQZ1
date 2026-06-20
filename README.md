@@ -25,27 +25,27 @@ Then I benchmark them.
 <table>
   <tr>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/go/00ADD8" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/go/00ADD8" width="48" height="32"/>
       <br>Go
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/typescript/3178C6" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/typescript/3178C6" width="32" height="32"/>
       <br>TypeScript
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/javascript/F7DF1E" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/javascript/F7DF1E" width="32" height="32"/>
       <br>JavaScript
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/python/3776AB" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/python/3776AB" width="32" height="32"/>
       <br>Python
     </td>
     <td align="center" width="96">
-      <img src="https://github.com/user-attachments/assets/3c046158-47c6-439d-a148-d405a4027bd8" width="48" height="48"/>
+      <img src="https://github.com/user-attachments/assets/3c046158-47c6-439d-a148-d405a4027bd8" width="32" height="32"/>
       <br>Java
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/rust/FFFFFF" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/rust/FFFFFF" width="32" height="32"/>
       <br>Rust
     </td>
   </tr>
@@ -56,145 +56,153 @@ Then I benchmark them.
 <table>
   <tr>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/nodedotjs/339933" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/nodedotjs/339933" width="32" height="32"/>
       <br>Node.js
     </td>
     <td align="center" width="96">
-      <img src="https://github.com/user-attachments/assets/8c5aef26-6f69-450c-b21e-6f710cf7a60c" width="48" height="48"/>
+      <img src="https://github.com/user-attachments/assets/8c5aef26-6f69-450c-b21e-6f710cf7a60c" width="60" height="60"/>
       <br>Gin
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/fastapi/009688" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/fastapi/009688" width="32" height="32"/>
       <br>FastAPI
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/graphql/E10098" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/graphql/E10098" width="32" height="32"/>
       <br>GraphQL
     </td>
     <td align="center" width="96">
-      <img src="https://github.com/user-attachments/assets/e4eba1d0-df66-45f3-acf8-b5ec488f643f" width="48" height="48"/>
+      <img src="https://github.com/user-attachments/assets/e4eba1d0-df66-45f3-acf8-b5ec488f643f" width="60" height="60"/>
       <br>gRPC
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/postgresql/4169E1" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/postgresql/4169E1" width="32" height="32"/>
       <br>PostgreSQL
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/mongodb/47A248" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/mongodb/47A248" width="32" height="32"/>
       <br>MongoDB
     </td>
     <td align="center" width="96">
-      <img src="https://www.svgrepo.com/show/303460/redis-logo.svg" width="48" height="48"/>
+      <img src="https://www.svgrepo.com/show/303460/redis-logo.svg" width="32" height="32"/>
       <br>Redis
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/apachekafka/FFFFFF" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/apachekafka/FFFFFF" width="60" height="60"/>
       <br>Kafka
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/rabbitmq/FF6600" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/rabbitmq/FF6600" width="32" height="32"/>
       <br>RabbitMQ
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/clickhouse/FFCC01" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/clickhouse/FFCC01" width="32" height="32"/>
       <br>ClickHouse
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/neo4j/4581C3" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/neo4j/4581C3" width="60" height="60"/>
       <br>Neo4j
     </td>
   </tr>
 </table>
+
+*Also: REST · WebSockets · Protocol Buffers*
 
 ### Cloud, DevOps & Observability
 
 <table>
   <tr>
     <td align="center" width="96">
-      <img src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/aws-color.png" width="48" height="48"/>
+      <img src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/aws-color.png" width="32" height="32"/>
       <br>AWS
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/docker/2496ED" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/docker/2496ED" width="32" height="32"/>
       <br>Docker
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/kubernetes/326CE5" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/kubernetes/326CE5" width="32" height="32"/>
       <br>Kubernetes
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/terraform/7B42BC" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/terraform/7B42BC" width="32" height="32"/>
       <br>Terraform
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/helm/87CEEB" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/helm/87CEEB" width="60" height="60"/>
       <br>Helm
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/argo/EF7B4D" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/argo/EF7B4D" width="32" height="32"/>
       <br>ArgoCD
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/nginx/009639" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/nginx/009639" width="60" height="60"/>
       <br>NGINX
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/kong/003459" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/kong/003459" width="60" height="60"/>
       <br>Kong
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/cloudflare/F38020" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/cloudflare/F38020" width="32" height="32"/>
       <br>Cloudflare
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/prometheus/E6522C" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/prometheus/E6522C" width="32" height="32"/>
       <br>Prometheus
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/grafana/F46800" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/grafana/F46800" width="32" height="32"/>
       <br>Grafana
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/opentelemetry/FFFFFF" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/opentelemetry/FFFFFF" width="32" height="32"/>
       <br>OpenTelemetry
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/datadog/632CA6" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/jaeger/66CFE3" width="32" height="32"/>
+      <br>Jaeger
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/datadog/632CA6" width="32" height="32"/>
       <br>Datadog
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/githubactions/2088FF" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/githubactions/2088FF" width="32" height="32"/>
       <br>Actions
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/linux/FCC624" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/linux/FCC624" width="32" height="32"/>
       <br>Linux
     </td>
   </tr>
 </table>
+
+*Also: Loki*
 
 ### Frontend & Testing
 
 <table>
   <tr>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/react/61DAFB" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/react/61DAFB" width="32" height="32"/>
       <br>React
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/nextdotjs/FFFFFF" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/nextdotjs/FFFFFF" width="32" height="32"/>
       <br>Next.js
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" width="32" height="32"/>
       <br>Tailwind
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/jest/C21325" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/jest/C21325" width="32" height="32"/>
       <br>Jest
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/k6/FF6A00" width="48" height="48"/>
+      <img src="https://cdn.simpleicons.org/k6/FF6A00" width="32" height="32"/>
       <br>k6
     </td>
   </tr>
