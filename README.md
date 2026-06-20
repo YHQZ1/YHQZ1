@@ -22,14 +22,34 @@ Then I benchmark them.
 
 ### Languages
 
-```
-TypeScript    ███████████████████████████████████████ Advanced             │ Type-safe Services, APIs
-JavaScript    ███████████████████████████████████████ Advanced             │ APIs, Node.js, Runtime Systems
-Go            ██████████████████████████ Intermediate                      │ Backend Services, Concurrency
-Java          ██████████████████████████ Intermediate                      │ OOP, DSA, JVM Ecosystem
-Python        ██████████████████████████ Intermediate                      │ APIs, Automation
-SQL           ██████████████████████████ Intermediate                      │ Query Optimization, Data Modeling
-```
+<table>
+  <tr>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/go/00ADD8" width="48" height="48"/>
+      <br>Go
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/typescript/3178C6" width="48" height="48"/>
+      <br>TypeScript
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/javascript/F7DF1E" width="48" height="48"/>
+      <br>JavaScript
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/python/3776AB" width="48" height="48"/>
+      <br>Python
+    </td>
+    <td align="center" width="96">
+      <img src="https://github.com/user-attachments/assets/3c046158-47c6-439d-a148-d405a4027bd8" width="48" height="48"/>
+      <br>Java
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/rust/FFFFFF" width="48" height="48"/>
+      <br>Rust
+    </td>
+  </tr>
+</table>
 
 ### Backend & Distributed Systems
 
@@ -40,12 +60,8 @@ SQL           ██████████████████████
       <br>Node.js
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/go/00ADD8" width="48" height="48"/>
+      <img src="https://github.com/user-attachments/assets/8c5aef26-6f69-450c-b21e-6f710cf7a60c" width="48" height="48"/>
       <br>Gin
-    </td>
-    <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/nestjs/E0234E" width="48" height="48"/>
-      <br>NestJS
     </td>
     <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/fastapi/009688" width="48" height="48"/>
@@ -56,8 +72,16 @@ SQL           ██████████████████████
       <br>GraphQL
     </td>
     <td align="center" width="96">
+      <img src="https://github.com/user-attachments/assets/e4eba1d0-df66-45f3-acf8-b5ec488f643f" width="48" height="48"/>
+      <br>gRPC
+    </td>
+    <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/postgresql/4169E1" width="48" height="48"/>
       <br>PostgreSQL
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/mongodb/47A248" width="48" height="48"/>
+      <br>MongoDB
     </td>
     <td align="center" width="96">
       <img src="https://www.svgrepo.com/show/303460/redis-logo.svg" width="48" height="48"/>
@@ -72,8 +96,12 @@ SQL           ██████████████████████
       <br>RabbitMQ
     </td>
     <td align="center" width="96">
-      <img src="https://cdn.simpleicons.org/elasticsearch/005571" width="48" height="48"/>
-      <br>Elasticsearch
+      <img src="https://cdn.simpleicons.org/clickhouse/FFCC01" width="48" height="48"/>
+      <br>ClickHouse
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/neo4j/4581C3" width="48" height="48"/>
+      <br>Neo4j
     </td>
   </tr>
 </table>
@@ -113,6 +141,10 @@ SQL           ██████████████████████
     <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/kong/003459" width="48" height="48"/>
       <br>Kong
+    </td>
+    <td align="center" width="96">
+      <img src="https://cdn.simpleicons.org/cloudflare/F38020" width="48" height="48"/>
+      <br>Cloudflare
     </td>
     <td align="center" width="96">
       <img src="https://cdn.simpleicons.org/prometheus/E6522C" width="48" height="48"/>
@@ -170,6 +202,24 @@ SQL           ██████████████████████
 
 ---
 
+# Featured Projects
+
+### [kprobe](https://github.com/YHQZ1/kprobe) — Kernel Observability for Financial Systems
+`Rust` `Aya` `eBPF` `Go` `Python` `Kafka` `Neo4j` `ClickHouse` `OpenTelemetry` `Jaeger`
+
+Rust/Aya eBPF probe attaching to kernel tracepoints at runtime — captures TCP RTT, CPU scheduling, and syscall latency at nanosecond resolution with zero application instrumentation. A Go/Kafka stream processor windows events into 100ms frames, builds a directed causal graph by PID/transaction co-occurrence, and classifies failure chains into Neo4j for root cause attribution. Isolation Forest anomaly detection over ClickHouse time-series triggers an LLM-powered RCA pipeline (Gemini API) that generates incident reports from the causal subgraph.
+
+### [ESX](https://github.com/YHQZ1/ESX) — Stock Exchange Infrastructure
+`Go` `Kafka` `gRPC` `PostgreSQL` `Redis` `AWS (EKS, MSK)` `Kubernetes`
+
+Production-grade securities exchange — 8 microservices (order gateway, settlement, matching engine, clearing house) over Kafka and gRPC. Order gateway sustains **6,000+ RPS at sub-40ms latency** via gRPC streaming and a buffer-and-drain pattern (500k-capacity buffered channels), surviving 300% load spikes. Atomic DvP settlement with an idempotent double-entry ledger — all movements net to zero.
+
+### [Hatch](https://github.com/YHQZ1/Hatch) — Self-hosted Cloud Deployment Platform
+`Go` `Gin` `AWS (ECS, Fargate)` `RabbitMQ` `Redis` `PostgreSQL` `Terraform` `Docker`
+
+Self-hosted Render/Railway alternative — independent Go microservices for cloning, building, and deploying containers on ECS Fargate, communicating via RabbitMQ with real-time log streaming through Redis pub/sub over WebSockets. **3,500 RPS at p99 < 75ms** with zero failed requests (ApacheBench), sustaining 716 req/s at p95 < 9ms under 50 concurrent VUs (k6).
+
+---
 # Activity
 
 <table align="center">
