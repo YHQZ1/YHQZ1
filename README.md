@@ -106,8 +106,6 @@ Then I benchmark them.
   </tr>
 </table>
 
-*Also: REST · WebSockets · Protocol Buffers*
-
 ### Cloud, DevOps & Observability
 
 <table>
@@ -178,8 +176,6 @@ Then I benchmark them.
     </td>
   </tr>
 </table>
-
-*Also: Loki*
 
 ### Frontend & Testing
 
