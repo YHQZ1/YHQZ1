@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD033 MD041 MD001 MD009 MD045-->
 <div align="center">
 
 <img 
@@ -241,15 +242,6 @@ Self-hosted Render/Railway alternative — independent Go microservices for clon
         width="420"
         height="180"
       />
-    </td>
-  </tr>
-</table>
-
-<table align="center">
-  <tr>
-    <td align="center" width="890">
-      <img src="https://github-readme-activity-graph.vercel.app/graph?username=YHQZ1&theme=github-dark&hide_border=true&bg_color=0d1117&color=58a6ff&line=58a6ff&point=c9d1d9&area=true&area_color=0d1117"
-           width="860"/>
     </td>
   </tr>
 </table>
