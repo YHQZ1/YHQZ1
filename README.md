@@ -5,8 +5,8 @@
   alt="Typing SVG" 
 />
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/uttkarsh-ruparel/) 
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://uttkarsh.dev/) 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/uttkarsh-ruparel/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://uttkarsh.dev/)
 [![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/yhqz/)
 
 </div>
@@ -205,35 +205,41 @@ Then I benchmark them.
 # Featured Projects
 
 ### [kprobe](https://github.com/YHQZ1/kprobe) — Kernel Observability for Financial Systems
+
 `Rust` `Aya` `eBPF` `Go` `Python` `Kafka` `Neo4j` `ClickHouse` `OpenTelemetry` `Jaeger`
 
 Rust/Aya eBPF probe attaching to kernel tracepoints at runtime — captures TCP RTT, CPU scheduling, and syscall latency at nanosecond resolution with zero application instrumentation. A Go/Kafka stream processor windows events into 100ms frames, builds a directed causal graph by PID/transaction co-occurrence, and classifies failure chains into Neo4j for root cause attribution. Isolation Forest anomaly detection over ClickHouse time-series triggers an LLM-powered RCA pipeline (Gemini API) that generates incident reports from the causal subgraph.
 
 ### [ESX](https://github.com/YHQZ1/ESX) — Stock Exchange Infrastructure
+
 `Go` `Kafka` `gRPC` `PostgreSQL` `Redis` `AWS (EKS, MSK)` `Kubernetes`
 
 Production-grade securities exchange — 8 microservices (order gateway, settlement, matching engine, clearing house) over Kafka and gRPC. Order gateway sustains **6,000+ RPS at sub-40ms latency** via gRPC streaming and a buffer-and-drain pattern (500k-capacity buffered channels), surviving 300% load spikes. Atomic DvP settlement with an idempotent double-entry ledger — all movements net to zero.
 
 ### [Hatch](https://github.com/YHQZ1/Hatch) — Self-hosted Cloud Deployment Platform
+
 `Go` `Gin` `AWS (ECS, Fargate)` `RabbitMQ` `Redis` `PostgreSQL` `Terraform` `Docker`
 
 Self-hosted Render/Railway alternative — independent Go microservices for cloning, building, and deploying containers on ECS Fargate, communicating via RabbitMQ with real-time log streaming through Redis pub/sub over WebSockets. **3,500 RPS at p99 < 75ms** with zero failed requests (ApacheBench), sustaining 716 req/s at p95 < 9ms under 50 concurrent VUs (k6).
 
 ---
+
 # Activity
 
 <table align="center">
   <tr>
     <td>
       <img
-        src="https://github-readme-stats-39i6.vercel.app/api?username=YHQZ1&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=58a6ff&cache_seconds=21600"
-        width="420" height="180"
+        src="./profile/stats.svg"
+        width="420"
+        height="180"
       />
     </td>
     <td>
       <img
-        src="https://github-readme-stats-39i6.vercel.app/api/top-langs/?username=YHQZ1&layout=compact&hide=html,css,dockerfile,plpgsql&langs_count=6&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&cache_seconds=21600"
-        width="420" height="180"
+        src="./profile/top-langs.svg"
+        width="420"
+        height="180"
       />
     </td>
   </tr>
