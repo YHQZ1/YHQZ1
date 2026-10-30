@@ -83,67 +83,49 @@ const escapeXml = (value) =>
     .replace(/>/g, "&gt;")
     .replace(/'/g, "&#39;");
 
-const GRAPH_NODES = [
-  [744, 52],
-  [796, 34],
-  [836, 68],
-  [768, 90],
-  [820, 111],
-  [752, 130],
-];
-const GRAPH_EDGES = [
-  [0, 1],
-  [1, 2],
-  [0, 3],
-  [1, 3],
-  [3, 4],
-  [2, 4],
-  [3, 5],
-  [4, 5],
-];
-const GRAPH_ROUTES = [
-  { nodes: [0, 1, 2, 4], duration: 4.6 },
-  { nodes: [5, 3, 1], duration: 4 },
-  { nodes: [0, 3, 4], duration: 3.4 },
+const TRACE_ROWS = [
+  { name: "gateway", from: 0, to: 1 },
+  { name: "orders", from: 0.06, to: 0.86 },
+  { name: "ledger", from: 0.2, to: 0.7 },
+  { name: "postgres", from: 0.28, to: 0.56, hot: true },
+  { name: "redis", from: 0.74, to: 0.84 },
 ];
 
-function graphSvg(t) {
-  const edges = GRAPH_EDGES.map(([a, b]) => {
-    const [x1, y1] = GRAPH_NODES[a];
-    const [x2, y2] = GRAPH_NODES[b];
-    return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${t.muted}" stroke-opacity="0.35" stroke-width="1"/>`;
+function traceVisual(t) {
+  const x0 = 634;
+  const width = 198;
+  const top = 34;
+  const gap = 24;
+  const bars = TRACE_ROWS.map((row, i) => {
+    const y = top + i * gap;
+    const x = x0 + row.from * width;
+    const w = ((row.to - row.from) * width).toFixed(1);
+    const regrow = 0.36 + i * 0.07;
+    const keyTimes = `0;0.3;0.34;${regrow.toFixed(2)};${(regrow + 0.1).toFixed(2)};1`;
+    const color = row.hot ? t.accent : t.muted;
+    const label = `<text x="560" y="${y + 3.5}" font-size="10" fill="${t.muted}" font-family="${MONO}">${row.name}</text>`;
+    const bar = `<rect x="${x.toFixed(1)}" y="${y - 6}" width="${w}" height="12" rx="2" fill="${color}" fill-opacity="${row.hot ? 0.35 : 0.22}" stroke="${color}" stroke-opacity="${row.hot ? 1 : 0.55}"><animate attributeName="width" values="${w};${w};0;0;${w};${w}" keyTimes="${keyTimes}" dur="7s" repeatCount="indefinite"/></rect>`;
+    return label + bar;
   }).join("");
-
-  const nodes = GRAPH_NODES.map(
-    ([x, y]) =>
-      `<circle cx="${x}" cy="${y}" r="4.5" fill="${t.bg}" stroke="${t.muted}" stroke-opacity="0.7" stroke-width="1.25"/>`
-  ).join("");
-
-  const [pulseX, pulseY] = GRAPH_NODES[4];
-  const pulse = `<circle cx="${pulseX}" cy="${pulseY}" r="4.5" fill="none" stroke="${t.accent}" stroke-width="1.25"><animate attributeName="r" from="4.5" to="18" dur="2.8s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" from="0.8" to="0" dur="2.8s" repeatCount="indefinite"/></circle><circle cx="${pulseX}" cy="${pulseY}" r="4.5" fill="${t.accent}"/>`;
-
-  const packets = GRAPH_ROUTES.map(({ nodes: route, duration }) => {
-    const path = route
-      .map((n, i) => `${i === 0 ? "M" : "L"}${GRAPH_NODES[n][0]},${GRAPH_NODES[n][1]}`)
-      .join(" ");
-    return `<circle r="2.5" fill="${t.accent}"><animateMotion path="${path}" dur="${duration}s" repeatCount="indefinite"/></circle>`;
+  const ticks = Array.from({ length: 13 }, (_, i) => {
+    const x = x0 + (i * width) / 12;
+    return `<line x1="${x.toFixed(1)}" y1="146" x2="${x.toFixed(1)}" y2="${i % 4 === 0 ? 152 : 149}" stroke="${t.ring}" stroke-width="1"/>`;
   }).join("");
-
-  return `${edges}${nodes}${pulse}${packets}`;
+  return `${bars}<line x1="${x0}" y1="146" x2="${x0 + width}" y2="146" stroke="${t.ring}" stroke-width="1"/>${ticks}`;
 }
 
 function bannerSvg(t) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="880" height="${BANNER_HEIGHT}" viewBox="0 0 880 ${BANNER_HEIGHT}" role="img" aria-label="Uttkarsh Ruparel. ${escapeXml(TAGLINE)}">
 <defs>
-<clipPath id="reveal"><rect x="148" y="106" width="${TAGLINE_WIDTH + 4}" height="28"><animate attributeName="width" from="0" to="${TAGLINE_WIDTH + 4}" dur="2.4s" begin="0s" fill="freeze"/></rect></clipPath>
+<clipPath id="reveal"><rect x="172" y="96" width="${TAGLINE_WIDTH + 4}" height="28"><animate attributeName="width" from="0" to="${TAGLINE_WIDTH + 4}" dur="2.4s" begin="0s" fill="freeze"/></rect></clipPath>
 </defs>
 <rect x="0.5" y="0.5" width="879" height="${BANNER_HEIGHT - 1}" rx="${RADIUS}" fill="${t.bg}" stroke="${t.border}"/>
-<circle cx="92" cy="72" r="37" fill="none" stroke="${t.ring}"/>
-<image href="data:image/png;base64,${LOGO}" x="56" y="36" width="72" height="72"/>
-<text x="148" y="88" font-size="46" font-weight="200" fill="${t.text}" font-family="${FONT}" letter-spacing="-1">Uttkarsh Ruparel</text>
-<g clip-path="url(#reveal)"><text x="148" y="124" font-size="18" font-weight="300" fill="${t.muted}" font-family="${FONT}" textLength="${TAGLINE_WIDTH}" lengthAdjust="spacing">${escapeXml(TAGLINE)}</text></g>
-<rect x="${148 + TAGLINE_WIDTH}" y="107" width="2" height="20" rx="1" fill="${t.accent}"><animate attributeName="x" from="148" to="${148 + TAGLINE_WIDTH}" dur="2.4s" begin="0s" fill="freeze"/><animate attributeName="opacity" values="1;0;1" dur="1s" begin="2.4s" repeatCount="indefinite"/></rect>
-${graphSvg(t)}
+<circle cx="96" cy="82" r="49.5" fill="none" stroke="${t.ring}"/>
+<image href="data:image/png;base64,${LOGO}" x="48" y="34" width="96" height="96"/>
+<text x="172" y="80" font-size="46" font-weight="200" fill="${t.text}" font-family="${FONT}" letter-spacing="-1">Uttkarsh Ruparel</text>
+<g clip-path="url(#reveal)"><text x="172" y="114" font-size="18" font-weight="300" fill="${t.muted}" font-family="${FONT}" textLength="${TAGLINE_WIDTH}" lengthAdjust="spacing">${escapeXml(TAGLINE)}</text></g>
+<rect x="${172 + TAGLINE_WIDTH}" y="97" width="2" height="20" rx="1" fill="${t.accent}"><animate attributeName="x" from="172" to="${172 + TAGLINE_WIDTH}" dur="2.4s" begin="0s" fill="freeze"/><animate attributeName="opacity" values="1;0;1" dur="1s" begin="2.4s" repeatCount="indefinite"/></rect>
+${traceVisual(t)}
 </svg>
 `;
 }
@@ -234,7 +216,7 @@ ${icons}
 mkdirSync("assets", { recursive: true });
 
 for (const [name, theme] of Object.entries(THEMES)) {
-  writeFileSync(`assets/banner-${name}.svg`, bannerSvg(theme));
+  writeFileSync(`assets/banner-trace-${name}.svg`, bannerSvg(theme));
   writeFileSync(`assets/intro-${name}.svg`, introSvg(theme));
   writeFileSync(`assets/stack-color-${name}.svg`, stackSvg(theme));
   for (const label of LABELS) {
