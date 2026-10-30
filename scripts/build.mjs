@@ -28,6 +28,16 @@ const CARD = {
 
 const RADIUS = 4;
 
+const INTRO_LINES = [
+  "I'm a CS undergrad at SIT Pune, but my stack doesn't know that.",
+  "I build backend systems the way they're supposed to be built. Then I benchmark them.",
+];
+
+const LABELS = [
+  { slug: "selected", number: "01", text: "SELECTED WORK" },
+  { slug: "stack", number: "02", text: "STACK" },
+];
+
 const LINKS = ["Portfolio", "LinkedIn", "X", "LeetCode"];
 const LINK_SIZE = 13.5;
 
@@ -35,6 +45,7 @@ const FONT = "Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif";
 const MONO = "'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace";
 
 const LOGO = readFileSync("assets/logo.png").toString("base64");
+const ICONS = JSON.parse(readFileSync("scripts/icons.json", "utf8"));
 
 const PROJECTS = [
   {
@@ -164,10 +175,58 @@ function linkSvg(t, label) {
 `;
 }
 
+function introSvg(t) {
+  const lines = INTRO_LINES.map(
+    (line, i) =>
+      `<text x="440" y="${24 + i * 26}" font-size="16" font-weight="300" fill="${t.text}" fill-opacity="0.8" text-anchor="middle" font-family="${FONT}">${escapeXml(line)}</text>`
+  ).join("\n");
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="880" height="64" viewBox="0 0 880 64" role="img" aria-label="${escapeXml(INTRO_LINES.join(" "))}">
+${lines}
+</svg>
+`;
+}
+
+function labelSvg(t, { number, text }) {
+  const label = `${number}  ${text}`;
+  const labelLength = Math.ceil(label.length * 9.6);
+  const gap = 20;
+  const lineEnd = 440 - labelLength / 2 - gap;
+  const lineStart = 440 + labelLength / 2 + gap;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="880" height="28" viewBox="0 0 880 28" role="img" aria-label="${escapeXml(text.toLowerCase())}">
+<line x1="0" y1="14.5" x2="${lineEnd}" y2="14.5" stroke="${t.ring}" stroke-width="1"/>
+<line x1="${lineStart}" y1="14.5" x2="880" y2="14.5" stroke="${t.ring}" stroke-width="1"/>
+<text x="440" y="18" font-size="11" fill="${t.muted}" text-anchor="middle" font-family="${MONO}" textLength="${labelLength}" lengthAdjust="spacing"><tspan fill="${t.accent}">${number}</tspan>  ${escapeXml(text)}</text>
+</svg>
+`;
+}
+
+function stackSvg(t) {
+  const size = 26;
+  const height = 72;
+  const margin = 56;
+  const step = (880 - margin * 2 - size) / (ICONS.length - 1);
+  const icons = ICONS.map((icon, i) => {
+    const x = margin + i * step;
+    const scale = size / Number(icon.viewBox.split(" ")[2]);
+    return `<path transform="translate(${x.toFixed(1)} ${(height - size) / 2}) scale(${scale.toFixed(4)})" d="${icon.path}" fill="${t.muted}"/>`;
+  }).join("\n");
+  const names = ICONS.map((icon) => icon.name).join(", ");
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="880" height="${height}" viewBox="0 0 880 ${height}" role="img" aria-label="${escapeXml(names)}">
+<rect x="0.5" y="0.5" width="879" height="${height - 1}" rx="${RADIUS}" fill="${t.bg}" stroke="${t.border}"/>
+${icons}
+</svg>
+`;
+}
+
 mkdirSync("assets", { recursive: true });
 
 for (const [name, theme] of Object.entries(THEMES)) {
   writeFileSync(`assets/banner-${name}.svg`, bannerSvg(theme));
+  writeFileSync(`assets/intro-${name}.svg`, introSvg(theme));
+  writeFileSync(`assets/stack-${name}.svg`, stackSvg(theme));
+  for (const label of LABELS) {
+    writeFileSync(`assets/label-${label.slug}-${name}.svg`, labelSvg(theme, label));
+  }
   for (const label of LINKS) {
     writeFileSync(`assets/link-${label.toLowerCase()}-${name}.svg`, linkSvg(theme, label));
   }
@@ -176,4 +235,4 @@ PROJECTS.forEach((project, index) => {
   writeFileSync(`assets/card-${project.title.toLowerCase()}.svg`, cardSvg(project, index));
 });
 
-console.log(`wrote 2 banners, ${PROJECTS.length} cards and ${LINKS.length * 2} links`);
+console.log("assets written");
