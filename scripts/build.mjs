@@ -98,6 +98,7 @@ const LATENCY = {
   histogramX: 783,
   histogramWidth: 44,
   sloRow: 7,
+  seconds: 24,
   incidents: [
     { from: 10, to: 19 },
     { from: 30, to: 38 },
@@ -128,8 +129,8 @@ function incident(c) {
 function latencyModes(c) {
   const k = incident(c);
   return [
-    { weight: 1.0, mean: 22.2 + 0.4 * Math.sin(c / 6), spread: 1.0 },
-    { weight: 0.5 + 0.25 * k, mean: 16.5 + 0.7 * Math.sin(c / 9 + 1) - 4 * k, spread: 1.4 },
+    { weight: 1.0, mean: 22.2 + 0.4 * Math.sin((4 * Math.PI * c) / LATENCY.cols), spread: 1.0 },
+    { weight: 0.5 + 0.25 * k, mean: 16.5 + 0.7 * Math.sin((2 * Math.PI * c) / LATENCY.cols + 1) - 4 * k, spread: 1.4 },
     { weight: 0.03 + 0.3 * k, mean: 12.5 - 7 * k, spread: 2.0 + 0.8 * k },
   ];
 }
@@ -138,13 +139,12 @@ function density(c, r) {
   return latencyModes(c).reduce((sum, m) => sum + m.weight * Math.exp(-((r - m.mean) ** 2) / (2 * m.spread ** 2)), 0);
 }
 
-function percentiles(c) {
-  const column = Array.from({ length: LATENCY.rows }, (_, r) => density(c, r));
+function percentileRows(column) {
   const total = column.reduce((a, b) => a + b, 0);
   let cumulative = 0;
   let p50 = null;
   let p99 = null;
-  for (let r = LATENCY.rows - 1; r >= 0; r--) {
+  for (let r = column.length - 1; r >= 0; r--) {
     cumulative += column[r] / total;
     if (p50 === null && cumulative >= 0.5) p50 = r;
     if (p99 === null && cumulative >= 0.99) p99 = r;
@@ -152,11 +152,16 @@ function percentiles(c) {
   return { p50, p99 };
 }
 
+function percentiles(c) {
+  return percentileRows(Array.from({ length: LATENCY.rows }, (_, r) => density(c, r)));
+}
+
 function latencyVisual(t) {
   const rand = seeded(5);
   const { cols, rows, stride, cell, x: x0, y: y0, sloRow } = LATENCY;
   const colX = (c) => x0 + c * stride;
   const rowY = (r) => y0 + r * stride;
+  const span = cols * stride;
   const square = (x, y) => `M${x} ${y}h${cell}v${cell}h-${cell}z`;
   const dust = new Map();
   const bands = [];
@@ -174,48 +179,52 @@ function latencyVisual(t) {
       dust.get(opacity).push(square(colX(c), rowY(r)));
     }
   }
-  const out = [...dust.entries()]
+  const tape = [...dust.entries()]
     .sort((a, b) => a[0] - b[0])
     .map(([opacity, shapes]) => `<path d="${shapes.join("")}" fill="${t.muted}" fill-opacity="${opacity}"/>`);
-  out.push(`<path d="${bands.join("")}" fill="${t.text}" fill-opacity="${t.isDark ? 0.85 : 0.8}"/>`);
-  const sloY = rowY(sloRow) + cell / 2;
-  out.push(`<line x1="${x0}" y1="${sloY}" x2="${LATENCY.separator - 6}" y2="${sloY}" stroke="${t.accent}" stroke-opacity="0.65" stroke-width="1" stroke-dasharray="2 3"/>`);
+  tape.push(`<path d="${bands.join("")}" fill="${t.text}" fill-opacity="${t.isDark ? 0.85 : 0.8}"/>`);
   const trace = [];
   for (let c = 0; c < cols; c++) {
     ["p50", "p99"].forEach((key) => {
       const row = marks[c][key];
-      const rowsHere = [row];
-      if (c > 0) {
-        const previous = marks[c - 1][key];
-        for (let r = Math.min(row, previous) + 1; r < Math.max(row, previous); r++) rowsHere.push(r);
-      }
-      rowsHere.forEach((r) => trace.push(square(colX(c), rowY(r))));
+      const previous = marks[(c + cols - 1) % cols][key];
+      const joined = [row];
+      for (let r = Math.min(row, previous) + 1; r < Math.max(row, previous); r++) joined.push(r);
+      joined.forEach((r) => trace.push(square(colX(c), rowY(r))));
     });
   }
-  out.push(`<path d="${trace.join("")}" fill="${t.accent}"/>`);
+  tape.push(`<path d="${trace.join("")}" fill="${t.accent}"/>`);
   const breaches = marks.map((m, c) => (m.p99 <= sloRow && c % 3 === 0 ? c : -1)).filter((c) => c >= 0);
-  breaches.forEach((c, i) => {
-    const pulse = i === breaches.length - 1 ? '<animate attributeName="r" values="1.9;3.4;1.9" dur="1.8s" repeatCount="indefinite"/>' : "";
-    out.push(`<circle cx="${colX(c) + cell / 2}" cy="${rowY(Math.max(0, marks[c].p99 - 2)) + cell / 2}" r="1.9" fill="${t.text}">${pulse}</circle>`);
+  breaches.forEach((c) => {
+    tape.push(`<circle cx="${colX(c) + cell / 2}" cy="${rowY(Math.max(0, marks[c].p99 - 2)) + cell / 2}" r="1.9" fill="${t.text}"/>`);
   });
   LATENCY.timeouts.forEach(([c, r]) => {
-    out.push(`<circle cx="${colX(c) + cell / 2}" cy="${rowY(r) + cell / 2}" r="1.5" fill="${t.text}" fill-opacity="0.9"/>`);
+    tape.push(`<circle cx="${colX(c) + cell / 2}" cy="${rowY(r) + cell / 2}" r="1.5" fill="${t.text}" fill-opacity="0.9"/>`);
   });
   const bottom = rowY(rows - 1) + cell;
-  out.push(`<line x1="${LATENCY.separator}" y1="${y0 - 2}" x2="${LATENCY.separator}" y2="${bottom + 2}" stroke="${t.ring}" stroke-width="1"/>`);
-  const now = marks[cols - 1];
-  [now.p50, now.p99].forEach((r) => {
+  const sloY = rowY(sloRow) + cell / 2;
+  const profile = Array.from({ length: rows }, (_, r) => {
+    let sum = 0;
+    for (let c = 0; c < cols; c++) sum += density(c, r);
+    return sum / cols;
+  });
+  const overall = percentileRows(profile);
+  const peak = Math.max(...profile);
+  const out = [
+    `<defs>
+<g id="tape">${tape.join("")}</g>
+<clipPath id="view"><rect x="${x0 - 1}" y="${y0 - 8}" width="${span - stride + cell + 2}" height="${bottom - y0 + 16}"/></clipPath>
+</defs>`,
+    `<g clip-path="url(#view)"><g><animateTransform attributeName="transform" type="translate" from="0 0" to="-${span} 0" dur="${LATENCY.seconds}s" repeatCount="indefinite"/><use href="#tape"/><use href="#tape" x="${span}"/></g></g>`,
+    `<line x1="${x0}" y1="${sloY}" x2="${LATENCY.separator - 6}" y2="${sloY}" stroke="${t.accent}" stroke-opacity="0.65" stroke-width="1" stroke-dasharray="2 3"/>`,
+    `<line x1="${LATENCY.separator}" y1="${y0 - 2}" x2="${LATENCY.separator}" y2="${bottom + 2}" stroke="${t.ring}" stroke-width="1"/>`,
+  ];
+  [overall.p50, overall.p99].forEach((r) => {
     out.push(`<path d="M${LATENCY.separator - 5} ${rowY(r) - 1} L${LATENCY.separator} ${rowY(r) + cell / 2} L${LATENCY.separator - 5} ${rowY(r) + cell + 1} Z" fill="${t.accent}"/>`);
   });
-  const recent = Array.from({ length: rows }, (_, r) => {
-    let sum = 0;
-    for (let c = cols - 6; c < cols; c++) sum += density(c, r);
-    return sum / 6;
-  });
-  const peak = Math.max(...recent);
-  recent.forEach((value, r) => {
+  profile.forEach((value, r) => {
     const share = value / peak;
-    const best = r === now.p50 || r === now.p99;
+    const best = r === overall.p50 || r === overall.p99;
     const width = Math.max(2, Math.round(share * LATENCY.histogramWidth));
     const fill = best ? t.accent : share > 0.8 ? t.text : t.muted;
     const opacity = best ? 1 : share > 0.8 ? 0.85 : 0.55;
@@ -371,7 +380,7 @@ ${icons}
 mkdirSync("assets", { recursive: true });
 
 for (const [name, theme] of Object.entries(THEMES)) {
-  writeFileSync(`assets/banner-latency-${name}.svg`, bannerSvg(theme));
+  writeFileSync(`assets/banner-live-${name}.svg`, bannerSvg(theme));
   writeFileSync(`assets/bio-${name}.svg`, introSvg(theme));
   writeFileSync(`assets/stack-set-${name}.svg`, stackSvg(theme));
   for (const label of LABELS) {
