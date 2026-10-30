@@ -2,6 +2,7 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
 const THEMES = {
   dark: {
+    isDark: true,
     bg: "#0a0a0a",
     border: "#1f1f1f",
     ring: "#2a2a2a",
@@ -10,6 +11,7 @@ const THEMES = {
     accent: "#8ab4f8",
   },
   light: {
+    isDark: false,
     bg: "#fafafa",
     border: "#e5e5e5",
     ring: "#d4d4d4",
@@ -200,15 +202,26 @@ function labelSvg(t, { number, text }) {
 `;
 }
 
+function luminance(hex) {
+  const value = hex.replace("#", "");
+  const full = value.length === 3 ? value.split("").map((c) => c + c).join("") : value;
+  const [r, g, b] = [0, 2, 4].map((i) => parseInt(full.slice(i, i + 2), 16));
+  return 0.299 * r + 0.587 * g + 0.114 * b;
+}
+
 function stackSvg(t) {
-  const size = 26;
+  const size = 28;
   const height = 72;
-  const margin = 56;
+  const margin = 52;
   const step = (880 - margin * 2 - size) / (ICONS.length - 1);
+  const lift = (fill) => (t.isDark && luminance(fill) < 70 ? "#f5f5f5" : fill);
   const icons = ICONS.map((icon, i) => {
     const x = margin + i * step;
     const scale = size / Number(icon.viewBox.split(" ")[2]);
-    return `<path transform="translate(${x.toFixed(1)} ${(height - size) / 2}) scale(${scale.toFixed(4)})" d="${icon.path}" fill="${t.muted}"/>`;
+    const shapes = icon.shapes
+      .map((shape) => `<path d="${shape.d}" fill="${lift(shape.fill)}"/>`)
+      .join("");
+    return `<g transform="translate(${x.toFixed(1)} ${(height - size) / 2}) scale(${scale.toFixed(4)})">${shapes}</g>`;
   }).join("\n");
   const names = ICONS.map((icon) => icon.name).join(", ");
   return `<svg xmlns="http://www.w3.org/2000/svg" width="880" height="${height}" viewBox="0 0 880 ${height}" role="img" aria-label="${escapeXml(names)}">
