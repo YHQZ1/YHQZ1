@@ -7,7 +7,7 @@
 
 <p><i>I'm a CS undergrad at SIT Pune, but my stack doesn't know that.<br>I build backend systems the way they're supposed to be built. Then I benchmark them.</i></p>
 
-<a href="https://uttkarsh.dev"><img src="https://img.shields.io/badge/Portfolio-uttkarsh.dev-4285f4?style=for-the-badge&labelColor=0a0a0a" alt="Portfolio"></a> <a href="https://www.linkedin.com/in/uttkarsh-ruparel/"><img src="https://img.shields.io/badge/LinkedIn-Connect-4285f4?style=for-the-badge&labelColor=0a0a0a" alt="LinkedIn"></a> <a href="https://x.com/yhqz01"><img src="https://img.shields.io/badge/X-%40yhqz01-4285f4?style=for-the-badge&labelColor=0a0a0a" alt="X"></a> <a href="https://leetcode.com/u/yhqz/"><img src="https://img.shields.io/badge/LeetCode-yhqz-4285f4?style=for-the-badge&labelColor=0a0a0a" alt="LeetCode"></a>
+<a href="https://uttkarsh.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-portfolio-dark.svg"><img src="assets/link-portfolio-light.svg" alt="Portfolio"></picture></a>&emsp;<a href="https://www.linkedin.com/in/uttkarsh-ruparel/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-linkedin-dark.svg"><img src="assets/link-linkedin-light.svg" alt="LinkedIn"></picture></a>&emsp;<a href="https://x.com/yhqz01"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-x-dark.svg"><img src="assets/link-x-light.svg" alt="X"></picture></a>&emsp;<a href="https://leetcode.com/u/yhqz/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/link-leetcode-dark.svg"><img src="assets/link-leetcode-light.svg" alt="LeetCode"></picture></a>
 
 <br>
 

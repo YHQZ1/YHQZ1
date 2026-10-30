@@ -28,6 +28,9 @@ const CARD = {
 
 const RADIUS = 4;
 
+const LINKS = ["Portfolio", "LinkedIn", "X", "LeetCode"];
+const LINK_SIZE = 13.5;
+
 const FONT = "Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif";
 const MONO = "'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace";
 
@@ -146,13 +149,31 @@ function cardSvg(project, index) {
 `;
 }
 
+const linkWidth = (label) => Math.ceil(label.length * LINK_SIZE * 0.56);
+
+function linkSvg(t, label) {
+  const textLength = linkWidth(label);
+  const width = textLength + 22;
+  const arrowX = textLength + 8;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="30" viewBox="0 0 ${width} 30" role="img" aria-label="${escapeXml(label)}">
+<text x="0" y="17" font-size="${LINK_SIZE}" fill="${t.text}" font-family="${FONT}" textLength="${textLength}" lengthAdjust="spacing">${escapeXml(label)}</text>
+<path d="M${arrowX} 15 L${arrowX + 9} 6 M${arrowX + 2} 6 L${arrowX + 9} 6 L${arrowX + 9} 13" stroke="${t.accent}" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="0" y1="26.5" x2="${width}" y2="26.5" stroke="${t.ring}" stroke-width="1"/>
+<line x1="0" y1="26.5" x2="22" y2="26.5" stroke="${t.accent}" stroke-width="1.5"/>
+</svg>
+`;
+}
+
 mkdirSync("assets", { recursive: true });
 
 for (const [name, theme] of Object.entries(THEMES)) {
   writeFileSync(`assets/banner-${name}.svg`, bannerSvg(theme));
+  for (const label of LINKS) {
+    writeFileSync(`assets/link-${label.toLowerCase()}-${name}.svg`, linkSvg(theme, label));
+  }
 }
 PROJECTS.forEach((project, index) => {
   writeFileSync(`assets/card-${project.title.toLowerCase()}.svg`, cardSvg(project, index));
 });
 
-console.log(`wrote 2 banners and ${PROJECTS.length} cards`);
+console.log(`wrote 2 banners, ${PROJECTS.length} cards and ${LINKS.length * 2} links`);
