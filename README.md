@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-trace-dark.svg">
-  <img src="assets/banner-trace-light.svg" alt="Uttkarsh Ruparel. If it can fail, I've already thought about how." width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-fractal-dark.svg">
+  <img src="assets/banner-fractal-light.svg" alt="Uttkarsh Ruparel. If it can fail, I've already thought about how." width="100%">
 </picture>
 
 <p>

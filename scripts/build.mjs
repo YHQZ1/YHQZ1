@@ -83,35 +83,39 @@ const escapeXml = (value) =>
     .replace(/>/g, "&gt;")
     .replace(/'/g, "&#39;");
 
-const TRACE_ROWS = [
-  { name: "gateway", from: 0, to: 1 },
-  { name: "orders", from: 0.06, to: 0.86 },
-  { name: "ledger", from: 0.2, to: 0.7 },
-  { name: "postgres", from: 0.28, to: 0.56, hot: true },
-  { name: "redis", from: 0.74, to: 0.84 },
-];
+const FRACTAL_ROWS = 32;
+const FRACTAL_COLS = FRACTAL_ROWS * 2 - 1;
+const FRACTAL_CELL = 3;
+const FRACTAL_STRIDE = 4;
 
-function traceVisual(t) {
-  const x0 = 634;
-  const width = 198;
-  const top = 34;
-  const gap = 24;
-  const bars = TRACE_ROWS.map((row, i) => {
-    const y = top + i * gap;
-    const x = x0 + row.from * width;
-    const w = ((row.to - row.from) * width).toFixed(1);
-    const regrow = 0.36 + i * 0.07;
-    const keyTimes = `0;0.3;0.34;${regrow.toFixed(2)};${(regrow + 0.1).toFixed(2)};1`;
-    const color = row.hot ? t.accent : t.muted;
-    const label = `<text x="560" y="${y + 3.5}" font-size="10" fill="${t.muted}" font-family="${MONO}">${row.name}</text>`;
-    const bar = `<rect x="${x.toFixed(1)}" y="${y - 6}" width="${w}" height="12" rx="2" fill="${color}" fill-opacity="${row.hot ? 0.35 : 0.22}" stroke="${color}" stroke-opacity="${row.hot ? 1 : 0.55}"><animate attributeName="width" values="${w};${w};0;0;${w};${w}" keyTimes="${keyTimes}" dur="7s" repeatCount="indefinite"/></rect>`;
-    return label + bar;
-  }).join("");
-  const ticks = Array.from({ length: 13 }, (_, i) => {
-    const x = x0 + (i * width) / 12;
-    return `<line x1="${x.toFixed(1)}" y1="146" x2="${x.toFixed(1)}" y2="${i % 4 === 0 ? 152 : 149}" stroke="${t.ring}" stroke-width="1"/>`;
-  }).join("");
-  return `${bars}<line x1="${x0}" y1="146" x2="${x0 + width}" y2="146" stroke="${t.ring}" stroke-width="1"/>${ticks}`;
+function ruleNinety() {
+  let row = Array(FRACTAL_COLS).fill(0);
+  row[FRACTAL_ROWS - 1] = 1;
+  const grid = [row];
+  for (let r = 1; r < FRACTAL_ROWS; r++) {
+    row = row.map((_, i) => (row[i - 1] || 0) ^ (row[i + 1] || 0));
+    grid.push(row);
+  }
+  return grid;
+}
+
+function fractalVisual(t) {
+  const width = FRACTAL_COLS * FRACTAL_STRIDE - (FRACTAL_STRIDE - FRACTAL_CELL);
+  const x0 = 548 + (284 - width) / 2;
+  const y0 = 82 - (FRACTAL_ROWS * FRACTAL_STRIDE - (FRACTAL_STRIDE - FRACTAL_CELL)) / 2;
+  const cells = [];
+  ruleNinety().forEach((row, r) => {
+    row.forEach((alive, c) => {
+      if (!alive) return;
+      const top = r === 0;
+      const x = x0 + c * FRACTAL_STRIDE;
+      const y = y0 + r * FRACTAL_STRIDE;
+      cells.push(
+        `<rect x="${x}" y="${y}" width="${FRACTAL_CELL}" height="${FRACTAL_CELL}" rx="0.5" fill="${top ? t.accent : t.muted}" fill-opacity="${top ? 1 : t.isDark ? 0.55 : 0.45}"${top ? ">" + '<animate attributeName="opacity" values="1;0.35;1" dur="2.4s" repeatCount="indefinite"/></rect>' : "/>"}`
+      );
+    });
+  });
+  return cells.join("");
 }
 
 function bannerSvg(t) {
@@ -125,7 +129,7 @@ function bannerSvg(t) {
 <text x="172" y="80" font-size="46" font-weight="200" fill="${t.text}" font-family="${FONT}" letter-spacing="-1">Uttkarsh Ruparel</text>
 <g clip-path="url(#reveal)"><text x="172" y="114" font-size="18" font-weight="300" fill="${t.muted}" font-family="${FONT}" textLength="${TAGLINE_WIDTH}" lengthAdjust="spacing">${escapeXml(TAGLINE)}</text></g>
 <rect x="${172 + TAGLINE_WIDTH}" y="97" width="2" height="20" rx="1" fill="${t.accent}"><animate attributeName="x" from="172" to="${172 + TAGLINE_WIDTH}" dur="2.4s" begin="0s" fill="freeze"/><animate attributeName="opacity" values="1;0;1" dur="1s" begin="2.4s" repeatCount="indefinite"/></rect>
-${traceVisual(t)}
+${fractalVisual(t)}
 </svg>
 `;
 }
@@ -216,7 +220,7 @@ ${icons}
 mkdirSync("assets", { recursive: true });
 
 for (const [name, theme] of Object.entries(THEMES)) {
-  writeFileSync(`assets/banner-trace-${name}.svg`, bannerSvg(theme));
+  writeFileSync(`assets/banner-fractal-${name}.svg`, bannerSvg(theme));
   writeFileSync(`assets/intro-${name}.svg`, introSvg(theme));
   writeFileSync(`assets/stack-color-${name}.svg`, stackSvg(theme));
   for (const label of LABELS) {
