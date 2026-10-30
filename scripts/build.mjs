@@ -51,24 +51,28 @@ const ICONS = JSON.parse(readFileSync("scripts/icons.json", "utf8"));
 
 const PROJECTS = [
   {
+    slug: "kprobe",
     title: "kprobe",
-    description: "Kernel-level flight recorder. eBPF, causal graphs, replay.",
+    description: "Kernel-level flight recorder.",
     accent: "#F0980A",
   },
   {
+    slug: "esx",
     title: "ESX",
-    description: "A stock exchange from scratch. Eight Go services.",
+    description: "Stock exchange, from scratch.",
     accent: "#00A0E0",
   },
   {
+    slug: "provenance",
     title: "Provenance",
-    description: "Plastic EPR compliance. OCR and RAG, human-reviewed.",
+    description: "Plastic EPR compliance.",
     accent: "#4A9B58",
   },
   {
+    slug: "hatch",
     title: "Hatch",
-    description: "Render-style deploys into your own AWS account.",
-    accent: "#F5F5F5",
+    description: "Deploys into your AWS account.",
+    accent: "#C4B5FD",
   },
 ];
 
@@ -134,16 +138,37 @@ ${fractalVisual(t)}
 `;
 }
 
+const MARK = { x: 18, y: 18, size: 36 };
+
+const hatchMark = ({ x, y, size }) => `<svg x="${x}" y="${y}" width="${size}" height="${size}" viewBox="6 4 52 52" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<g transform="translate(32 32) scale(.9) translate(-32 -31)" stroke-width="2.4">
+<path d="M13 29l9.5 5L32 29l9.5 5L51 29v7l-9.5 5L32 36l-9.5 5L13 36Z" fill="#c4b5fd" stroke="#c4b5fd"/>
+<path d="M13 36l9.5 5L32 36l9.5 5L51 36v8L32 55 13 44ZM32 40v15" stroke="#ffffff"/>
+<path d="M13 29V15L32 4l19 11v14l-9.5 5L32 29l-9.5 5ZM13 15l19 11 19-11M32 4v22" stroke="#ffffff"/>
+</g>
+</svg>`;
+
+function logoMark(project) {
+  if (project.slug === "hatch") return hatchMark(MARK);
+  const { x, y, size } = MARK;
+  const data = readFileSync(`assets/logos/${project.slug}.png`).toString("base64");
+  const image = `<image href="data:image/png;base64,${data}" x="${x}" y="${y}" width="${size}" height="${size}"/>`;
+  if (project.slug !== "esx") return image;
+  return `<clipPath id="mark"><rect x="${x}" y="${y}" width="${size}" height="${size}" rx="${RADIUS}"/></clipPath>
+<g clip-path="url(#mark)">${image}</g>`;
+}
+
 function cardSvg(project, index) {
   const { accent } = project;
   const number = String(index + 1).padStart(2, "0");
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="96" viewBox="0 0 400 96" role="img" aria-label="${escapeXml(project.title)}. ${escapeXml(project.description)}">
-<rect x="0.5" y="0.5" width="399" height="95" rx="${RADIUS}" fill="${CARD.bg}" stroke="${CARD.border}"/>
-<text x="22" y="28" font-size="10" fill="${accent}" font-family="${MONO}" letter-spacing="2">${number}</text>
-<text x="22" y="56" font-size="21" font-weight="300" fill="${CARD.text}" font-family="${FONT}">${escapeXml(project.title)}</text>
-<path d="M360 22 L372 22 L372 34 M372 22 L358 36" stroke="${accent}" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="22" y="77" font-size="12" fill="${CARD.muted}" font-family="${FONT}">${escapeXml(project.description)}</text>
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="200" height="112" viewBox="0 0 200 112" role="img" aria-label="${escapeXml(project.title)}. ${escapeXml(project.description)}">
+<rect x="0.5" y="0.5" width="199" height="111" rx="${RADIUS}" fill="${CARD.bg}" stroke="${CARD.border}"/>
+${logoMark(project)}
+<text x="66" y="40" font-size="10" fill="${accent}" font-family="${MONO}" letter-spacing="2">${number}</text>
+<path d="M168 18 L178 18 L178 28 M178 18 L166 30" stroke="${accent}" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="18" y="82" font-size="18" font-weight="300" fill="${CARD.text}" font-family="${FONT}">${escapeXml(project.title)}</text>
+<text x="18" y="98" font-size="10.5" fill="${CARD.muted}" font-family="${FONT}">${escapeXml(project.description)}</text>
 </svg>
 `;
 }
@@ -231,7 +256,7 @@ for (const [name, theme] of Object.entries(THEMES)) {
   }
 }
 PROJECTS.forEach((project, index) => {
-  writeFileSync(`assets/card-${project.title.toLowerCase()}.svg`, cardSvg(project, index));
+  writeFileSync(`assets/row-${project.slug}.svg`, cardSvg(project, index));
 });
 
 console.log("assets written");

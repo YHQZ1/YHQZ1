@@ -22,10 +22,10 @@
 </p>
 
 <p>
-  <a href="https://github.com/YHQZ1/Kprobe"><img src="assets/card-kprobe.svg" alt="kprobe" width="49.4%"></a>
-  <a href="https://github.com/YHQZ1/ESX"><img src="assets/card-esx.svg" alt="ESX" width="49.4%"></a>
-  <a href="https://github.com/YHQZ1/Provenance-FYP"><img src="assets/card-provenance.svg" alt="Provenance" width="49.4%"></a>
-  <a href="https://github.com/YHQZ1/Hatch"><img src="assets/card-hatch.svg" alt="Hatch" width="49.4%"></a>
+  <a href="https://github.com/YHQZ1/Kprobe"><img src="assets/row-kprobe.svg" alt="kprobe" width="24.5%"></a>
+  <a href="https://github.com/YHQZ1/ESX"><img src="assets/row-esx.svg" alt="ESX" width="24.5%"></a>
+  <a href="https://github.com/YHQZ1/Provenance-FYP"><img src="assets/row-provenance.svg" alt="Provenance" width="24.5%"></a>
+  <a href="https://github.com/YHQZ1/Hatch"><img src="assets/row-hatch.svg" alt="Hatch" width="24.5%"></a>
 </p>
 
 <p>
