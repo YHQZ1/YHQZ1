@@ -26,6 +26,8 @@ const CARD = {
   muted: "#8a8a8a",
 };
 
+const RADIUS = 4;
+
 const FONT = "Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif";
 const MONO = "'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace";
 
@@ -35,36 +37,28 @@ const PROJECTS = [
   {
     title: "kprobe",
     description: "Kernel-level flight recorder. eBPF, causal graphs, replay.",
-    tags: ["Rust", "eBPF", "Go", "Neo4j"],
     accent: "#F0980A",
   },
   {
     title: "ESX",
     description: "A stock exchange from scratch. Eight Go services.",
-    tags: ["Go", "Kafka", "gRPC", "PostgreSQL"],
     accent: "#00A0E0",
   },
   {
     title: "Provenance",
     description: "Plastic EPR compliance. OCR and RAG, human-reviewed.",
-    tags: ["Python", "Qdrant", "Kubernetes"],
     accent: "#4A9B58",
   },
   {
     title: "Hatch",
     description: "Render-style deploys into your own AWS account.",
-    tags: ["Go", "React", "AWS"],
     accent: "#F5F5F5",
   },
 ];
 
 const TAGLINE = "If it can fail, I've already thought about how.";
 const TAGLINE_WIDTH = 324;
-const BANNER_PILLS = [
-  "Pune, India",
-  "SWE Intern at TraceLink",
-  "Organizer at GDG on Campus",
-];
+const BANNER_HEIGHT = 164;
 
 const escapeXml = (value) =>
   value
@@ -73,15 +67,13 @@ const escapeXml = (value) =>
     .replace(/>/g, "&gt;")
     .replace(/'/g, "&#39;");
 
-const textWidth = (text, size, factor) => Math.ceil(text.length * size * factor);
-
 const GRAPH_NODES = [
-  [744, 70],
-  [796, 46],
-  [836, 92],
-  [768, 122],
-  [820, 150],
-  [752, 176],
+  [744, 52],
+  [796, 34],
+  [836, 68],
+  [768, 90],
+  [820, 111],
+  [752, 130],
 ];
 const GRAPH_EDGES = [
   [0, 1],
@@ -125,25 +117,16 @@ function graphSvg(t) {
 }
 
 function bannerSvg(t) {
-  let pillX = 148;
-  const pills = BANNER_PILLS.map((label) => {
-    const width = textWidth(label, 11.5, 0.58) + 36;
-    const svg = `<rect x="${pillX + 0.5}" y="164.5" width="${width}" height="26" rx="13" fill="none" stroke="${t.border}"/><circle cx="${pillX + 13}" cy="177.5" r="3" fill="${t.accent}"/><text x="${pillX + 24}" y="181.5" font-size="11.5" fill="${t.muted}" font-family="${FONT}">${escapeXml(label)}</text>`;
-    pillX += width + 10;
-    return svg;
-  }).join("");
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="880" height="220" viewBox="0 0 880 220" role="img" aria-label="Uttkarsh Ruparel. ${escapeXml(TAGLINE)}">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="880" height="${BANNER_HEIGHT}" viewBox="0 0 880 ${BANNER_HEIGHT}" role="img" aria-label="Uttkarsh Ruparel. ${escapeXml(TAGLINE)}">
 <defs>
-<clipPath id="reveal"><rect x="148" y="116" width="${TAGLINE_WIDTH + 4}" height="28"><animate attributeName="width" from="0" to="${TAGLINE_WIDTH + 4}" dur="2.4s" begin="0s" fill="freeze"/></rect></clipPath>
+<clipPath id="reveal"><rect x="148" y="106" width="${TAGLINE_WIDTH + 4}" height="28"><animate attributeName="width" from="0" to="${TAGLINE_WIDTH + 4}" dur="2.4s" begin="0s" fill="freeze"/></rect></clipPath>
 </defs>
-<rect x="0.5" y="0.5" width="879" height="219" rx="16" fill="${t.bg}" stroke="${t.border}"/>
-<circle cx="92" cy="84" r="37" fill="none" stroke="${t.ring}"/>
-<image href="data:image/png;base64,${LOGO}" x="56" y="48" width="72" height="72"/>
-<text x="148" y="100" font-size="46" font-weight="200" fill="${t.text}" font-family="${FONT}" letter-spacing="-1">Uttkarsh Ruparel</text>
-<g clip-path="url(#reveal)"><text x="148" y="136" font-size="18" font-weight="300" fill="${t.muted}" font-family="${FONT}" textLength="${TAGLINE_WIDTH}" lengthAdjust="spacing">${escapeXml(TAGLINE)}</text></g>
-<rect x="${148 + TAGLINE_WIDTH}" y="119" width="2" height="20" rx="1" fill="${t.accent}"><animate attributeName="x" from="148" to="${148 + TAGLINE_WIDTH}" dur="2.4s" begin="0s" fill="freeze"/><animate attributeName="opacity" values="1;0;1" dur="1s" begin="2.4s" repeatCount="indefinite"/></rect>
-${pills}
+<rect x="0.5" y="0.5" width="879" height="${BANNER_HEIGHT - 1}" rx="${RADIUS}" fill="${t.bg}" stroke="${t.border}"/>
+<circle cx="92" cy="72" r="37" fill="none" stroke="${t.ring}"/>
+<image href="data:image/png;base64,${LOGO}" x="56" y="36" width="72" height="72"/>
+<text x="148" y="88" font-size="46" font-weight="200" fill="${t.text}" font-family="${FONT}" letter-spacing="-1">Uttkarsh Ruparel</text>
+<g clip-path="url(#reveal)"><text x="148" y="124" font-size="18" font-weight="300" fill="${t.muted}" font-family="${FONT}" textLength="${TAGLINE_WIDTH}" lengthAdjust="spacing">${escapeXml(TAGLINE)}</text></g>
+<rect x="${148 + TAGLINE_WIDTH}" y="107" width="2" height="20" rx="1" fill="${t.accent}"><animate attributeName="x" from="148" to="${148 + TAGLINE_WIDTH}" dur="2.4s" begin="0s" fill="freeze"/><animate attributeName="opacity" values="1;0;1" dur="1s" begin="2.4s" repeatCount="indefinite"/></rect>
 ${graphSvg(t)}
 </svg>
 `;
@@ -151,26 +134,14 @@ ${graphSvg(t)}
 
 function cardSvg(project, index) {
   const { accent } = project;
-  let tagX = 22;
-  const tagY = 88;
-  const tags = project.tags
-    .map((tag) => {
-      const width = textWidth(tag, 10.5, 0.6) + 20;
-      const svg = `<rect x="${tagX + 0.5}" y="${tagY + 0.5}" width="${width}" height="20" rx="10" fill="none" stroke="${accent}" stroke-opacity="0.4"/><text x="${tagX + 0.5 + width / 2}" y="${tagY + 14}" font-size="10.5" fill="${accent}" text-anchor="middle" font-family="${FONT}">${escapeXml(tag)}</text>`;
-      tagX += width + 6;
-      return svg;
-    })
-    .join("");
-
   const number = String(index + 1).padStart(2, "0");
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="122" viewBox="0 0 400 122" role="img" aria-label="${escapeXml(project.title)}. ${escapeXml(project.description)}">
-<rect x="0.5" y="0.5" width="399" height="121" rx="12" fill="${CARD.bg}" stroke="${CARD.border}"/>
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="96" viewBox="0 0 400 96" role="img" aria-label="${escapeXml(project.title)}. ${escapeXml(project.description)}">
+<rect x="0.5" y="0.5" width="399" height="95" rx="${RADIUS}" fill="${CARD.bg}" stroke="${CARD.border}"/>
 <text x="22" y="28" font-size="10" fill="${accent}" font-family="${MONO}" letter-spacing="2">${number}</text>
 <text x="22" y="56" font-size="21" font-weight="300" fill="${CARD.text}" font-family="${FONT}">${escapeXml(project.title)}</text>
 <path d="M360 22 L372 22 L372 34 M372 22 L358 36" stroke="${accent}" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="22" y="76" font-size="12" fill="${CARD.muted}" font-family="${FONT}">${escapeXml(project.description)}</text>
-${tags}
+<text x="22" y="77" font-size="12" fill="${CARD.muted}" font-family="${FONT}">${escapeXml(project.description)}</text>
 </svg>
 `;
 }

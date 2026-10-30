@@ -29,6 +29,4 @@
   </picture>
 </p>
 
-<p><sub>APIs don't judge you. Mine just return 200s.</sub></p>
-
 </div>
