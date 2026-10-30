@@ -14,10 +14,10 @@
 <h3>Selected work</h3>
 
 <p>
-  <a href="https://github.com/YHQZ1/Kprobe"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-kprobe-dark.svg"><img src="assets/card-kprobe-light.svg" alt="kprobe" width="48.5%"></picture></a>
-  <a href="https://github.com/YHQZ1/ESX"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-esx-dark.svg"><img src="assets/card-esx-light.svg" alt="ESX" width="48.5%"></picture></a>
-  <a href="https://github.com/YHQZ1/Provenance-FYP"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-provenance-dark.svg"><img src="assets/card-provenance-light.svg" alt="Provenance" width="48.5%"></picture></a>
-  <a href="https://github.com/YHQZ1/Hatch"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-hatch-dark.svg"><img src="assets/card-hatch-light.svg" alt="Hatch" width="48.5%"></picture></a>
+  <a href="https://github.com/YHQZ1/Kprobe"><img src="assets/card-kprobe.svg" alt="kprobe" width="48.5%"></a>
+  <a href="https://github.com/YHQZ1/ESX"><img src="assets/card-esx.svg" alt="ESX" width="48.5%"></a>
+  <a href="https://github.com/YHQZ1/Provenance-FYP"><img src="assets/card-provenance.svg" alt="Provenance" width="48.5%"></a>
+  <a href="https://github.com/YHQZ1/Hatch"><img src="assets/card-hatch.svg" alt="Hatch" width="48.5%"></a>
 </p>
 
 <h3>Stack</h3>

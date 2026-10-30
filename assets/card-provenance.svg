@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="122" viewBox="0 0 400 122" role="img" aria-label="Provenance. Plastic EPR compliance. OCR and RAG, human-reviewed.">
+<rect x="0.5" y="0.5" width="399" height="121" rx="12" fill="#0a0a0a" stroke="#1c1c1c"/>
+<text x="22" y="28" font-size="10" fill="#4A9B58" font-family="'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" letter-spacing="2">03</text>
+<text x="22" y="56" font-size="21" font-weight="300" fill="#f5f5f5" font-family="Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif">Provenance</text>
+<path d="M360 22 L372 22 L372 34 M372 22 L358 36" stroke="#4A9B58" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="22" y="76" font-size="12" fill="#8a8a8a" font-family="Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif">Plastic EPR compliance. OCR and RAG, human-reviewed.</text>
+<rect x="22.5" y="88.5" width="58" height="20" rx="10" fill="none" stroke="#4A9B58" stroke-opacity="0.4"/><text x="51.5" y="102" font-size="10.5" fill="#4A9B58" text-anchor="middle" font-family="Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif">Python</text><rect x="86.5" y="88.5" width="58" height="20" rx="10" fill="none" stroke="#4A9B58" stroke-opacity="0.4"/><text x="115.5" y="102" font-size="10.5" fill="#4A9B58" text-anchor="middle" font-family="Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif">Qdrant</text><rect x="150.5" y="88.5" width="83" height="20" rx="10" fill="none" stroke="#4A9B58" stroke-opacity="0.4"/><text x="192" y="102" font-size="10.5" fill="#4A9B58" text-anchor="middle" font-family="Raleway, 'Helvetica Neue', Helvetica, Arial, sans-serif">Kubernetes</text>
+</svg>
