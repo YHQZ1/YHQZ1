@@ -223,16 +223,34 @@ function luminance(hex) {
 function stackSvg(t) {
   const size = 28;
   const height = 72;
-  const margin = 52;
-  const step = (880 - margin * 2 - size) / (ICONS.length - 1);
+  const margin = 48;
+  const gap = (880 - margin * 2 - ICONS.reduce((sum, icon) => sum + icon.vw, 0)) / (ICONS.length - 1);
+  let cursor = margin;
+  const positions = ICONS.map((icon) => {
+    const x = cursor - icon.dx;
+    cursor += icon.vw + gap;
+    return x;
+  });
   const lift = (fill) => (t.isDark && luminance(fill) < 70 ? "#f5f5f5" : fill);
   const icons = ICONS.map((icon, i) => {
-    const x = margin + i * step;
-    const scale = size / Number(icon.viewBox.split(" ")[2]);
+    const x = positions[i];
+    const y = (height - size) / 2;
+    if (icon.svg) {
+      const data = readFileSync(`assets/stack/${icon.svg}.svg`).toString("base64");
+      const box = icon.box ?? size;
+      const inset = (box - size) / 2;
+      return `<image href="data:image/svg+xml;base64,${data}" x="${(x - inset).toFixed(1)}" y="${y - inset}" width="${box}" height="${box}"/>`;
+    }
+    if (icon.png) {
+      const data = readFileSync(`assets/stack/${icon.png}.png`).toString("base64");
+      return `<image href="data:image/png;base64,${data}" x="${x.toFixed(1)}" y="${y}" width="${size}" height="${size}"/>`;
+    }
+    const [minX, minY, boxWidth] = icon.viewBox.split(" ").map(Number);
+    const scale = size / boxWidth;
     const shapes = icon.shapes
-      .map((shape) => `<path d="${shape.d}" fill="${lift(shape.fill)}"/>`)
+      .map((shape) => `<path d="${shape.d}" fill="${t.isDark && shape.darkFill ? shape.darkFill : lift(shape.fill)}"/>`)
       .join("");
-    return `<g transform="translate(${x.toFixed(1)} ${(height - size) / 2}) scale(${scale.toFixed(4)})">${shapes}</g>`;
+    return `<g transform="translate(${(x - minX * scale).toFixed(1)} ${(y - minY * scale).toFixed(1)}) scale(${scale.toFixed(4)})">${shapes}</g>`;
   }).join("\n");
   const names = ICONS.map((icon) => icon.name).join(", ");
   return `<svg xmlns="http://www.w3.org/2000/svg" width="880" height="${height}" viewBox="0 0 880 ${height}" role="img" aria-label="${escapeXml(names)}">
@@ -247,7 +265,7 @@ mkdirSync("assets", { recursive: true });
 for (const [name, theme] of Object.entries(THEMES)) {
   writeFileSync(`assets/banner-fractal-${name}.svg`, bannerSvg(theme));
   writeFileSync(`assets/intro-${name}.svg`, introSvg(theme));
-  writeFileSync(`assets/stack-color-${name}.svg`, stackSvg(theme));
+  writeFileSync(`assets/stack-even-${name}.svg`, stackSvg(theme));
   for (const label of LABELS) {
     writeFileSync(`assets/label-${label.slug}-${name}.svg`, labelSvg(theme, label));
   }
