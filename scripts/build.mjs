@@ -31,13 +31,13 @@ const CARD = {
 const RADIUS = 4;
 
 const INTRO_LINES = [
-  "I'm a CS undergrad at SIT Pune, but my stack doesn't know that.",
+  "I'm a CSE undergrad at Symbiosis Institute of Technology, Pune, but my stack doesn't know that.",
   "I build backend systems the way they're supposed to be built. Then I benchmark them.",
 ];
 
 const LABELS = [
-  { slug: "selected", number: "01", text: "SELECTED WORK" },
-  { slug: "stack", number: "02", text: "STACK" },
+  { slug: "selected", text: "SELECTED WORK" },
+  { slug: "stack", text: "STACK" },
 ];
 
 const LINKS = ["Portfolio", "LinkedIn", "X", "LeetCode"];
@@ -87,39 +87,150 @@ const escapeXml = (value) =>
     .replace(/>/g, "&gt;")
     .replace(/'/g, "&#39;");
 
-const FRACTAL_ROWS = 32;
-const FRACTAL_COLS = FRACTAL_ROWS * 2 - 1;
-const FRACTAL_CELL = 3;
-const FRACTAL_STRIDE = 4;
+const LATENCY = {
+  cols: 52,
+  rows: 26,
+  stride: 4,
+  cell: 3,
+  x: 558,
+  y: 24,
+  separator: 775,
+  histogramX: 783,
+  histogramWidth: 44,
+  sloRow: 7,
+  incidents: [
+    { from: 10, to: 19 },
+    { from: 30, to: 38 },
+  ],
+  timeouts: [
+    [8, 0],
+    [22, 1],
+    [26, 0],
+    [40, 0],
+    [47, 1],
+    [50, 0],
+  ],
+};
 
-function ruleNinety() {
-  let row = Array(FRACTAL_COLS).fill(0);
-  row[FRACTAL_ROWS - 1] = 1;
-  const grid = [row];
-  for (let r = 1; r < FRACTAL_ROWS; r++) {
-    row = row.map((_, i) => (row[i - 1] || 0) ^ (row[i + 1] || 0));
-    grid.push(row);
-  }
-  return grid;
+function seeded(seed) {
+  let state = seed;
+  return () => {
+    state = (state * 1664525 + 1013904223) % 4294967296;
+    return state / 4294967296;
+  };
 }
 
-function fractalVisual(t) {
-  const width = FRACTAL_COLS * FRACTAL_STRIDE - (FRACTAL_STRIDE - FRACTAL_CELL);
-  const x0 = 548 + (284 - width) / 2;
-  const y0 = 82 - (FRACTAL_ROWS * FRACTAL_STRIDE - (FRACTAL_STRIDE - FRACTAL_CELL)) / 2;
-  const cells = [];
-  ruleNinety().forEach((row, r) => {
-    row.forEach((alive, c) => {
-      if (!alive) return;
-      const top = r === 0;
-      const x = x0 + c * FRACTAL_STRIDE;
-      const y = y0 + r * FRACTAL_STRIDE;
-      cells.push(
-        `<rect x="${x}" y="${y}" width="${FRACTAL_CELL}" height="${FRACTAL_CELL}" rx="0.5" fill="${top ? t.accent : t.muted}" fill-opacity="${top ? 1 : t.isDark ? 0.55 : 0.45}"${top ? ">" + '<animate attributeName="opacity" values="1;0.35;1" dur="2.4s" repeatCount="indefinite"/></rect>' : "/>"}`
-      );
+function incident(c) {
+  const hit = LATENCY.incidents.find((e) => c >= e.from && c <= e.to);
+  return hit ? Math.sin((Math.PI * (c - hit.from + 0.5)) / (hit.to - hit.from + 1)) : 0;
+}
+
+function latencyModes(c) {
+  const k = incident(c);
+  return [
+    { weight: 1.0, mean: 22.2 + 0.4 * Math.sin(c / 6), spread: 1.0 },
+    { weight: 0.5 + 0.25 * k, mean: 16.5 + 0.7 * Math.sin(c / 9 + 1) - 4 * k, spread: 1.4 },
+    { weight: 0.03 + 0.3 * k, mean: 12.5 - 7 * k, spread: 2.0 + 0.8 * k },
+  ];
+}
+
+function density(c, r) {
+  return latencyModes(c).reduce((sum, m) => sum + m.weight * Math.exp(-((r - m.mean) ** 2) / (2 * m.spread ** 2)), 0);
+}
+
+function percentiles(c) {
+  const column = Array.from({ length: LATENCY.rows }, (_, r) => density(c, r));
+  const total = column.reduce((a, b) => a + b, 0);
+  let cumulative = 0;
+  let p50 = null;
+  let p99 = null;
+  for (let r = LATENCY.rows - 1; r >= 0; r--) {
+    cumulative += column[r] / total;
+    if (p50 === null && cumulative >= 0.5) p50 = r;
+    if (p99 === null && cumulative >= 0.99) p99 = r;
+  }
+  return { p50, p99 };
+}
+
+function latencyVisual(t) {
+  const rand = seeded(5);
+  const { cols, rows, stride, cell, x: x0, y: y0, sloRow } = LATENCY;
+  const colX = (c) => x0 + c * stride;
+  const rowY = (r) => y0 + r * stride;
+  const square = (x, y) => `M${x} ${y}h${cell}v${cell}h-${cell}z`;
+  const dust = new Map();
+  const bands = [];
+  const marks = Array.from({ length: cols }, (_, c) => percentiles(c));
+  for (let c = 0; c < cols; c++) {
+    for (let r = 0; r < rows; r++) {
+      const d = density(c, r);
+      if (d > 0.78) {
+        bands.push(square(colX(c), rowY(r)));
+        continue;
+      }
+      const level = Math.min(0.85, d * (0.55 + rand() * 0.7));
+      const opacity = Math.round((0.05 + level * (t.isDark ? 0.62 : 0.45)) * 12) / 12;
+      if (!dust.has(opacity)) dust.set(opacity, []);
+      dust.get(opacity).push(square(colX(c), rowY(r)));
+    }
+  }
+  const out = [...dust.entries()]
+    .sort((a, b) => a[0] - b[0])
+    .map(([opacity, shapes]) => `<path d="${shapes.join("")}" fill="${t.muted}" fill-opacity="${opacity}"/>`);
+  out.push(`<path d="${bands.join("")}" fill="${t.text}" fill-opacity="${t.isDark ? 0.85 : 0.8}"/>`);
+  const sloY = rowY(sloRow) + cell / 2;
+  out.push(`<line x1="${x0}" y1="${sloY}" x2="${LATENCY.separator - 6}" y2="${sloY}" stroke="${t.accent}" stroke-opacity="0.65" stroke-width="1" stroke-dasharray="2 3"/>`);
+  const trace = [];
+  for (let c = 0; c < cols; c++) {
+    ["p50", "p99"].forEach((key) => {
+      const row = marks[c][key];
+      const rowsHere = [row];
+      if (c > 0) {
+        const previous = marks[c - 1][key];
+        for (let r = Math.min(row, previous) + 1; r < Math.max(row, previous); r++) rowsHere.push(r);
+      }
+      rowsHere.forEach((r) => trace.push(square(colX(c), rowY(r))));
     });
+  }
+  out.push(`<path d="${trace.join("")}" fill="${t.accent}"/>`);
+  const breaches = marks.map((m, c) => (m.p99 <= sloRow && c % 3 === 0 ? c : -1)).filter((c) => c >= 0);
+  breaches.forEach((c, i) => {
+    const pulse = i === breaches.length - 1 ? '<animate attributeName="r" values="1.9;3.4;1.9" dur="1.8s" repeatCount="indefinite"/>' : "";
+    out.push(`<circle cx="${colX(c) + cell / 2}" cy="${rowY(Math.max(0, marks[c].p99 - 2)) + cell / 2}" r="1.9" fill="${t.text}">${pulse}</circle>`);
   });
-  return cells.join("");
+  LATENCY.timeouts.forEach(([c, r]) => {
+    out.push(`<circle cx="${colX(c) + cell / 2}" cy="${rowY(r) + cell / 2}" r="1.5" fill="${t.text}" fill-opacity="0.9"/>`);
+  });
+  const bottom = rowY(rows - 1) + cell;
+  out.push(`<line x1="${LATENCY.separator}" y1="${y0 - 2}" x2="${LATENCY.separator}" y2="${bottom + 2}" stroke="${t.ring}" stroke-width="1"/>`);
+  const now = marks[cols - 1];
+  [now.p50, now.p99].forEach((r) => {
+    out.push(`<path d="M${LATENCY.separator - 5} ${rowY(r) - 1} L${LATENCY.separator} ${rowY(r) + cell / 2} L${LATENCY.separator - 5} ${rowY(r) + cell + 1} Z" fill="${t.accent}"/>`);
+  });
+  const recent = Array.from({ length: rows }, (_, r) => {
+    let sum = 0;
+    for (let c = cols - 6; c < cols; c++) sum += density(c, r);
+    return sum / 6;
+  });
+  const peak = Math.max(...recent);
+  recent.forEach((value, r) => {
+    const share = value / peak;
+    const best = r === now.p50 || r === now.p99;
+    const width = Math.max(2, Math.round(share * LATENCY.histogramWidth));
+    const fill = best ? t.accent : share > 0.8 ? t.text : t.muted;
+    const opacity = best ? 1 : share > 0.8 ? 0.85 : 0.55;
+    const pulse = best ? '><animate attributeName="opacity" values="1;0.35;1" dur="1.8s" repeatCount="indefinite"/></rect>' : "/>";
+    out.push(`<rect x="${LATENCY.histogramX}" y="${rowY(r)}" width="${width}" height="${cell}" rx="0.5" fill="${fill}" fill-opacity="${opacity}"${pulse}`);
+  });
+  const captionY = bottom + 14;
+  [
+    [x0, "LATENCY"],
+    [LATENCY.histogramX, "P50 P99"],
+  ].forEach(([x, label]) => {
+    out.push(`<text x="${x}" y="${captionY}" font-size="8" fill="${t.muted}" fill-opacity="0.85" letter-spacing="2" font-family="${MONO}">${label}</text>`);
+  });
+  out.push(`<text x="${x0 + 2}" y="${sloY - 3}" font-size="7" fill="${t.accent}" fill-opacity="0.9" letter-spacing="1.5" font-family="${MONO}">SLO</text>`);
+  return out.join("\n");
 }
 
 function bannerSvg(t) {
@@ -133,7 +244,7 @@ function bannerSvg(t) {
 <text x="172" y="80" font-size="46" font-weight="200" fill="${t.text}" font-family="${FONT}" letter-spacing="-1">Uttkarsh Ruparel</text>
 <g clip-path="url(#reveal)"><text x="172" y="114" font-size="18" font-weight="300" fill="${t.muted}" font-family="${FONT}" textLength="${TAGLINE_WIDTH}" lengthAdjust="spacing">${escapeXml(TAGLINE)}</text></g>
 <rect x="${172 + TAGLINE_WIDTH}" y="97" width="2" height="20" rx="1" fill="${t.accent}"><animate attributeName="x" from="172" to="${172 + TAGLINE_WIDTH}" dur="2.4s" begin="0s" fill="freeze"/><animate attributeName="opacity" values="1;0;1" dur="1s" begin="2.4s" repeatCount="indefinite"/></rect>
-${fractalVisual(t)}
+${latencyVisual(t)}
 </svg>
 `;
 }
@@ -158,14 +269,12 @@ function logoMark(project) {
 <g clip-path="url(#mark)">${image}</g>`;
 }
 
-function cardSvg(project, index) {
+function cardSvg(project) {
   const { accent } = project;
-  const number = String(index + 1).padStart(2, "0");
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="200" height="112" viewBox="0 0 200 112" role="img" aria-label="${escapeXml(project.title)}. ${escapeXml(project.description)}">
 <rect x="0.5" y="0.5" width="199" height="111" rx="${RADIUS}" fill="${CARD.bg}" stroke="${CARD.border}"/>
 ${logoMark(project)}
-<text x="66" y="40" font-size="10" fill="${accent}" font-family="${MONO}" letter-spacing="2">${number}</text>
 <path d="M168 18 L178 18 L178 28 M178 18 L166 30" stroke="${accent}" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 <text x="18" y="82" font-size="18" font-weight="300" fill="${CARD.text}" font-family="${FONT}">${escapeXml(project.title)}</text>
 <text x="18" y="98" font-size="10.5" fill="${CARD.muted}" font-family="${FONT}">${escapeXml(project.description)}</text>
@@ -199,16 +308,15 @@ ${lines}
 `;
 }
 
-function labelSvg(t, { number, text }) {
-  const label = `${number}  ${text}`;
-  const labelLength = Math.ceil(label.length * 9.6);
+function labelSvg(t, { text }) {
+  const labelLength = Math.ceil(text.length * 9.6);
   const gap = 20;
   const lineEnd = 440 - labelLength / 2 - gap;
   const lineStart = 440 + labelLength / 2 + gap;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="880" height="28" viewBox="0 0 880 28" role="img" aria-label="${escapeXml(text.toLowerCase())}">
 <line x1="0" y1="14.5" x2="${lineEnd}" y2="14.5" stroke="${t.ring}" stroke-width="1"/>
 <line x1="${lineStart}" y1="14.5" x2="880" y2="14.5" stroke="${t.ring}" stroke-width="1"/>
-<text x="440" y="18" font-size="11" fill="${t.muted}" text-anchor="middle" font-family="${MONO}" textLength="${labelLength}" lengthAdjust="spacing"><tspan fill="${t.accent}">${number}</tspan>  ${escapeXml(text)}</text>
+<text x="440" y="18" font-size="11" fill="${t.muted}" text-anchor="middle" font-family="${MONO}" textLength="${labelLength}" lengthAdjust="spacing">${escapeXml(text)}</text>
 </svg>
 `;
 }
@@ -263,18 +371,18 @@ ${icons}
 mkdirSync("assets", { recursive: true });
 
 for (const [name, theme] of Object.entries(THEMES)) {
-  writeFileSync(`assets/banner-fractal-${name}.svg`, bannerSvg(theme));
-  writeFileSync(`assets/intro-${name}.svg`, introSvg(theme));
-  writeFileSync(`assets/stack-even-${name}.svg`, stackSvg(theme));
+  writeFileSync(`assets/banner-latency-${name}.svg`, bannerSvg(theme));
+  writeFileSync(`assets/bio-${name}.svg`, introSvg(theme));
+  writeFileSync(`assets/stack-set-${name}.svg`, stackSvg(theme));
   for (const label of LABELS) {
-    writeFileSync(`assets/label-${label.slug}-${name}.svg`, labelSvg(theme, label));
+    writeFileSync(`assets/divider-${label.slug}-${name}.svg`, labelSvg(theme, label));
   }
   for (const label of LINKS) {
     writeFileSync(`assets/link-${label.toLowerCase()}-${name}.svg`, linkSvg(theme, label));
   }
 }
-PROJECTS.forEach((project, index) => {
-  writeFileSync(`assets/row-${project.slug}.svg`, cardSvg(project, index));
+PROJECTS.forEach((project) => {
+  writeFileSync(`assets/work-${project.slug}.svg`, cardSvg(project));
 });
 
 console.log("assets written");

@@ -1,14 +1,14 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-fractal-dark.svg">
-  <img src="assets/banner-fractal-light.svg" alt="Uttkarsh Ruparel. If it can fail, I've already thought about how." width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-latency-dark.svg">
+  <img src="assets/banner-latency-light.svg" alt="Uttkarsh Ruparel. If it can fail, I've already thought about how." width="100%">
 </picture>
 
 <p>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/intro-dark.svg">
-    <img src="assets/intro-light.svg" alt="I'm a CS undergrad at SIT Pune, but my stack doesn't know that. I build backend systems the way they're supposed to be built. Then I benchmark them." width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/bio-dark.svg">
+    <img src="assets/bio-light.svg" alt="I'm a CSE undergrad at Symbiosis Institute of Technology, Pune, but my stack doesn't know that. I build backend systems the way they're supposed to be built. Then I benchmark them." width="100%">
   </picture>
 </p>
 
@@ -16,29 +16,29 @@
 
 <p>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/label-selected-dark.svg">
-    <img src="assets/label-selected-light.svg" alt="Selected work" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/divider-selected-dark.svg">
+    <img src="assets/divider-selected-light.svg" alt="Selected work" width="100%">
   </picture>
 </p>
 
 <p>
-  <a href="https://github.com/YHQZ1/Kprobe"><img src="assets/row-kprobe.svg" alt="kprobe" width="24.5%"></a>
-  <a href="https://github.com/YHQZ1/ESX"><img src="assets/row-esx.svg" alt="ESX" width="24.5%"></a>
-  <a href="https://github.com/YHQZ1/Provenance-FYP"><img src="assets/row-provenance.svg" alt="Provenance" width="24.5%"></a>
-  <a href="https://github.com/YHQZ1/Hatch"><img src="assets/row-hatch.svg" alt="Hatch" width="24.5%"></a>
+  <a href="https://github.com/YHQZ1/Kprobe"><img src="assets/work-kprobe.svg" alt="kprobe" width="24.5%"></a>
+  <a href="https://github.com/YHQZ1/ESX"><img src="assets/work-esx.svg" alt="ESX" width="24.5%"></a>
+  <a href="https://github.com/YHQZ1/Provenance-FYP"><img src="assets/work-provenance.svg" alt="Provenance" width="24.5%"></a>
+  <a href="https://github.com/YHQZ1/Hatch"><img src="assets/work-hatch.svg" alt="Hatch" width="24.5%"></a>
 </p>
 
 <p>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/label-stack-dark.svg">
-    <img src="assets/label-stack-light.svg" alt="Stack" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/divider-stack-dark.svg">
+    <img src="assets/divider-stack-light.svg" alt="Stack" width="100%">
   </picture>
 </p>
 
 <p>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/stack-even-dark.svg">
-    <img src="assets/stack-even-light.svg" alt="Go, Rust, TypeScript, Python, Java, Node.js, PostgreSQL, Redis, OpenSearch, Kafka, GraphQL, Protobuf, Docker, Kubernetes, Helm, ArgoCD, AWS, Jenkins, Grafana, Jaeger" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/stack-set-dark.svg">
+    <img src="assets/stack-set-light.svg" alt="Go, Rust, TypeScript, Python, Java, Node.js, PostgreSQL, Redis, OpenSearch, Kafka, GraphQL, Protobuf, Docker, Kubernetes, Helm, ArgoCD, AWS, Jenkins, Grafana, Jaeger" width="100%">
   </picture>
 </p>
 
