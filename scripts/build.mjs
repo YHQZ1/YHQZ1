@@ -236,7 +236,7 @@ mkdirSync("assets", { recursive: true });
 for (const [name, theme] of Object.entries(THEMES)) {
   writeFileSync(`assets/banner-${name}.svg`, bannerSvg(theme));
   writeFileSync(`assets/intro-${name}.svg`, introSvg(theme));
-  writeFileSync(`assets/stack-${name}.svg`, stackSvg(theme));
+  writeFileSync(`assets/stack-color-${name}.svg`, stackSvg(theme));
   for (const label of LABELS) {
     writeFileSync(`assets/label-${label.slug}-${name}.svg`, labelSvg(theme, label));
   }

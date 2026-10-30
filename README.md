@@ -37,8 +37,8 @@
 
 <p>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg">
-    <img src="assets/stack-light.svg" alt="Go, Rust, TypeScript, Python, Java, Node.js, React, Kafka, PostgreSQL, Redis, Docker, Kubernetes, AWS, Grafana, Terraform" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/stack-color-dark.svg">
+    <img src="assets/stack-color-light.svg" alt="Go, Rust, TypeScript, Python, Java, Node.js, React, Kafka, PostgreSQL, Redis, Docker, Kubernetes, AWS, Grafana, Terraform" width="100%">
   </picture>
 </p>
 
